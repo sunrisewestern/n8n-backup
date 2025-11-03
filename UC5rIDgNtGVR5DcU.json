@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "If": {
       "main": [
@@ -2290,9 +2290,13 @@
       "projectId": "O3TKzz1LtWsv0pol"
     }
   ],
-  "staticData": null,
+  "staticData": {
+    "node:Schedule Trigger": {
+      "recurrenceRules": []
+    }
+  },
   "tags": [],
-  "triggerCount": 0,
-  "updatedAt": "2025-11-03T04:56:45.555Z",
+  "triggerCount": 1,
+  "updatedAt": "2025-11-03T05:05:57.895Z",
   "versionId": "8424ecdf-9803-43d1-acab-d4b99cd9f2a8"
 }
