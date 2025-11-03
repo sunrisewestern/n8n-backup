@@ -1,0 +1,1025 @@
+{
+  "active": false,
+  "connections": {
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Respond to User",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Text": {
+      "main": [
+        [
+          {
+            "node": "Text Summarizer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wikipedia": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Audio URL": {
+      "main": [
+        [
+          {
+            "node": "Download Audio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Image URL": {
+      "main": [
+        [
+          {
+            "node": "Download Image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Video URL": {
+      "main": [
+        [
+          {
+            "node": "Download Video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download Audio": {
+      "main": [
+        [
+          {
+            "node": "Google Gemini Audio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download Image": {
+      "main": [
+        [
+          {
+            "node": "Image Explainer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download Video": {
+      "main": [
+        [
+          {
+            "node": "Google Gemini Video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Response": {
+      "main": [
+        [
+          {
+            "node": "Get User's Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image Explainer": {
+      "main": [
+        [
+          {
+            "node": "Get User's Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Text Summarizer": {
+      "main": [
+        [
+          {
+            "node": "Get User's Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Response1": {
+      "main": [
+        [
+          {
+            "node": "Get User's Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get User's Message": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Audio": {
+      "main": [
+        [
+          {
+            "node": "Format Response1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Video": {
+      "main": [
+        [
+          {
+            "node": "Format Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Window Buffer Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Redirect Message Types": {
+      "main": [
+        [
+          {
+            "node": "Get Audio URL",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "node": "Get Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Image Explainer",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Text Summarizer",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Redirect Message Types",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-11-01T06:06:50.649Z",
+  "id": "zDwWBoczcGK3m3JC",
+  "isArchived": true,
+  "meta": {
+    "templateId": "2466"
+  },
+  "name": "meta ray ban gemini",
+  "nodes": [
+    {
+      "parameters": {
+        "resource": "media",
+        "operation": "mediaUrlGet",
+        "mediaGetId": "={{ $json.audio.id }}"
+      },
+      "id": "4e8375ac-a9bd-434f-88ea-fc53486ed34b",
+      "name": "Get Audio URL",
+      "type": "n8n-nodes-base.whatsApp",
+      "position": [
+        1728,
+        224
+      ],
+      "typeVersion": 1,
+      "webhookId": "a0acc1f5-b633-4383-947e-e7faac1eda9c"
+    },
+    {
+      "parameters": {
+        "resource": "media",
+        "operation": "mediaUrlGet",
+        "mediaGetId": "={{ $json.video.id }}"
+      },
+      "id": "0b10b152-7b63-4c65-a88f-e381160af625",
+      "name": "Get Video URL",
+      "type": "n8n-nodes-base.whatsApp",
+      "position": [
+        1728,
+        592
+      ],
+      "typeVersion": 1,
+      "webhookId": "d79e44e4-b586-43ae-aa3a-6b5628530314",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "media",
+        "operation": "mediaUrlGet",
+        "mediaGetId": "={{ $json.image.id }}"
+      },
+      "id": "0fbf3563-595e-426f-b0ce-22fb46fc267a",
+      "name": "Get Image URL",
+      "type": "n8n-nodes-base.whatsApp",
+      "position": [
+        1728,
+        928
+      ],
+      "typeVersion": 1,
+      "webhookId": "cd79c394-4048-4127-91bc-39bcaaa16559",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "whatsAppApi",
+        "options": {}
+      },
+      "id": "c565d153-dca3-41bc-8d3c-bd3e60a24cce",
+      "name": "Download Video",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1888,
+        592
+      ],
+      "typeVersion": 4.2,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "whatsAppApi",
+        "options": {}
+      },
+      "id": "4d134f8d-b5c7-4ad5-8b89-d3d384ce7c39",
+      "name": "Download Audio",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1888,
+        224
+      ],
+      "typeVersion": 4.2,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "whatsAppApi",
+        "options": {}
+      },
+      "id": "cf676a44-ff19-4490-947a-281861b12678",
+      "name": "Download Image",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1888,
+        928
+      ],
+      "typeVersion": 4.2,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "=whatsapp-tutorial-{{ $json.from }}"
+      },
+      "id": "32e4bebe-9ef9-4d63-9ba9-4d911f352005",
+      "name": "Window Buffer Memory",
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "position": [
+        3088,
+        944
+      ],
+      "typeVersion": 1.2,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "d990cbd6-a408-4ec4-a889-41be698918d9",
+              "name": "message_type",
+              "type": "string",
+              "value": "={{ $('Split Out Message Parts').item.json.type }}"
+            },
+            {
+              "id": "23b785c3-f38e-4706-80b7-51f333bba3bd",
+              "name": "message_text",
+              "type": "string",
+              "value": "={{ $json.text }}"
+            },
+            {
+              "id": "6e83f9a7-cf75-4182-b2d2-3151e8af76b9",
+              "name": "from",
+              "type": "string",
+              "value": "={{ $('WhatsApp Trigger').item.json.messages[0].from }}"
+            },
+            {
+              "id": "da4b602a-28ca-4b0d-a747-c3d3698c3731",
+              "name": "message_caption",
+              "type": "string",
+              "value": "={{ $('Redirect Message Types').item.json.video && $('Redirect Message Types').item.json.video.caption || '' }}\n{{ $('Redirect Message Types').item.json.image && $('Redirect Message Types').item.json.image.caption || ''}}\n{{ $('Redirect Message Types').item.json.audio && $('Redirect Message Types').item.json.audio.caption || ''}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "66c2ae34-5c5c-458e-9593-82567a4a54ff",
+      "name": "Get User's Message",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        2800,
+        768
+      ],
+      "typeVersion": 3.4,
+      "disabled": true
+    },
+    {
+      "parameters": {},
+      "id": "e1056315-cd19-4d5b-a52b-b10a1404a636",
+      "name": "Wikipedia",
+      "type": "@n8n/n8n-nodes-langchain.toolWikipedia",
+      "position": [
+        3216,
+        944
+      ],
+      "typeVersion": 1,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "a0e72f26-389f-4d68-a522-9012ae9172f1",
+                    "leftValue": "={{ $json.type }}",
+                    "rightValue": "ptt",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Audio Message"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "1fb894b4-5abb-45a6-b651-05f70aaadd43",
+                    "leftValue": "={{ $json.type }}",
+                    "rightValue": "video",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Video Message"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "5671e03d-9ae0-4c50-80e3-10b52227a22d",
+                    "leftValue": "={{ $json.type }}",
+                    "rightValue": "image",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Image Message"
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra",
+          "renameFallbackOutput": "Text Message"
+        }
+      },
+      "id": "194a8bf3-3270-4e13-88d2-70f498200c43",
+      "name": "Redirect Message Types",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        1456,
+        768
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "content": "## 1. WhatsApp Trigger\n[Learn more about the WhatsApp Trigger](https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger)\n\nTo start receiving WhatsApp messages in your workflow, there are quite a few steps involved so be sure to follow the n8n documentation. When we recieve WhatsApp messages, we'll split out the messages part of the payload and handle them depending on the message type using the Switch node.",
+        "height": 245.72612197928734,
+        "width": 335.8011507479863,
+        "color": 7
+      },
+      "id": "55e3f0f6-224d-4294-a394-0fea97ed711f",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        928,
+        400
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "### 2. Transcribe Audio Messages 💬\nFor audio messages or voice notes, we can use GPT4o to transcribe the message for our AI Agent.",
+        "height": 97.23360184119679,
+        "width": 356.65822784810103,
+        "color": 7
+      },
+      "id": "11b3110b-2795-4a72-972b-11e6c2a8278f",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1728,
+        112
+      ],
+      "typeVersion": 1,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "### 3. Describe Video Messages 🎬\nFor video messages, one approach is to use a Multimodal Model that supports parsing video. Currently, Google Gemini is a well-tested service for this task. We'll need to use the HTTP request node as currrently n8n's LLM node doesn't currently support video binary types.",
+        "height": 127.13555811277331,
+        "width": 492.5258918296896,
+        "color": 7
+      },
+      "id": "df549f15-ba49-4a96-b2a6-bafb3d081139",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1728,
+        432
+      ],
+      "typeVersion": 1,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "### 4. Analyse Image Messages 🏞️\nFor image messages, we can use GPT4o to explain what is going on in the message for our AI Agent.",
+        "height": 97.23360184119679,
+        "width": 356.65822784810103,
+        "color": 7
+      },
+      "id": "b010ed69-3735-456d-b5a8-15f00aad124f",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1728,
+        800
+      ],
+      "typeVersion": 1,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "### 5. Text summarizer 📘\nFor text messages, we don't need to do much transformation but it's nice to summarize for easier understanding.",
+        "height": 97.23360184119679,
+        "width": 428.24395857307246,
+        "color": 7
+      },
+      "id": "58563aa2-9367-4dcb-9b56-4893c8d1d831",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1728,
+        1104
+      ],
+      "typeVersion": 1,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "amount": 0
+      },
+      "id": "283ba8b5-3f45-46d9-92fa-4a1c2f2df4b2",
+      "name": "Get Text",
+      "type": "n8n-nodes-base.wait",
+      "position": [
+        1728,
+        1232
+      ],
+      "webhookId": "cc44aeb0-bf71-44e6-a464-feaa38d26d85",
+      "typeVersion": 1.1,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "## 6. Generate Response with AI Agent\n[Read more about the AI Agent node](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent)\n\nNow that we'll able to handle all message types from WhatsApp, we could do pretty much anything we want with it by giving it our AI agent. Examples could include handling customer support, helping to book appointments or verifying documents.\n\nIn this demonstration, we'll just create a simple AI Agent which responds to our WhatsApp user's message and returns a simple response.",
+        "height": 273.14522439585744,
+        "width": 500.7797468354428,
+        "color": 7
+      },
+      "id": "001efa37-d1da-421a-8d41-09789b0fffa8",
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2992,
+        448
+      ],
+      "typeVersion": 1,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "## 7. Respond to WhatsApp User\n[Read more about the Whatsapp node](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/)\n\nTo close out this demonstration, we'll simple send a simple text message back to the user. Note that this WhatsApp node also allows you to send images, audio, videos, documents as well as location!",
+        "height": 211.45776754890682,
+        "width": 384.12151898734186,
+        "color": 7
+      },
+      "id": "ce6ee62b-ace9-4b39-a4b5-7446437e63a5",
+      "name": "Sticky Note6",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        3456,
+        1040
+      ],
+      "typeVersion": 1,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "477115632141067",
+        "recipientPhoneNumber": "={{ $('WhatsApp Trigger').item.json.messages[0].from }}",
+        "textBody": "={{ $json.output }}",
+        "additionalFields": {}
+      },
+      "id": "1fe4e440-4062-4c53-b45a-19f3b5f05c81",
+      "name": "Respond to User",
+      "type": "n8n-nodes-base.whatsApp",
+      "position": [
+        3456,
+        864
+      ],
+      "typeVersion": 1,
+      "webhookId": "9b5cfea8-6d4d-4a2a-9e56-f57204bd9440",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "## Try It Out!\n\n### This n8n template demonstrates the beginnings of building your own n8n-powered WhatsApp chatbot! Under the hood, utilise n8n's powerful AI features to handle different message types and use an AI agent to respond to the user. A powerful tool for any use-case!\n\n* Incoming WhatsApp Trigger provides a way to get messages into the workflow.\n* The message received is extracted and sent through 1 of 4 branches for processing.\n* Each processing branch uses AI to analyse, summarize or transcribe the message so that the AI agent can understand it.\n* The AI Agent is used to generate a response generally and uses a wikipedia tool for more complex queries.\n* Finally, the response message is sent back to the WhatsApp user using the WhatsApp node.\n\n### Need Help?\nJoin the [Discord](https://discord.com/invite/XPKeKXeB7d) or ask in the [Forum](https://community.n8n.io/)!",
+        "height": 562.8608514850005,
+        "width": 470.66513233601853
+      },
+      "id": "d0ed9c07-bed8-44e6-8fa1-eb09c1342470",
+      "name": "Sticky Note7",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        368,
+        240
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "### Activate workflow to use!\nYou must activate the workflow to use this WhatsApp Chabot. If you are self-hosting, ensure WhatsApp is able to connect to your server.",
+        "height": 96.0144533433243,
+        "width": 473.28063885246377,
+        "color": 5
+      },
+      "id": "a09515a8-7be1-4b30-a45b-f827082ee350",
+      "name": "Sticky Note8",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        368,
+        832
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "Here is an image sent by the user. Describe the image and transcribe any text visible in the image.",
+        "messages": {
+          "messageValues": [
+            {
+              "type": "HumanMessagePromptTemplate",
+              "messageType": "imageBinary"
+            }
+          ]
+        }
+      },
+      "id": "de167d60-65f4-41d3-be50-be00eea5c621",
+      "name": "Image Explainer",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "position": [
+        2416,
+        928
+      ],
+      "typeVersion": 1.4,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "2ec0e573-373b-4692-bfae-86b6d3b9aa9a",
+              "name": "text",
+              "type": "string",
+              "value": "={{ $json.candidates[0].content.parts[0].text }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4462a8e3-1734-4128-951d-7d7bbf8fa1d9",
+      "name": "Format Response",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        2576,
+        592
+      ],
+      "typeVersion": 3.4,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n### 🚨 Google Gemini Required!\nNot using Gemini? Feel free to swap this out for any Multimodal Model that supports Video.",
+        "height": 305.35604142692785,
+        "width": 260
+      },
+      "id": "9a6a27cf-ad30-4737-8893-6351552e3410",
+      "name": "Sticky Note9",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2256,
+        560
+      ],
+      "typeVersion": 1,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-1.5-pro-002",
+        "options": {}
+      },
+      "id": "48c8262a-abde-461e-97af-d3fda0d4e5bd",
+      "name": "Google Gemini Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "position": [
+        2960,
+        944
+      ],
+      "typeVersion": 1,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n### 🚨 Google Gemini Required!\nNot using Gemini? Feel free to swap this out for any Multimodal Model that supports Audio.",
+        "height": 294.22048331415436,
+        "width": 260
+      },
+      "id": "c65bc014-9faa-447d-b728-5b1e87ba12ea",
+      "name": "Sticky Note10",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2256,
+        208
+      ],
+      "typeVersion": 1,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-002:generateContent",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "googlePalmApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{\n{\n  \"contents\": [{\n    \"parts\":[\n      {\"text\": \"Transcribe this audio\"},\n      {\"inlineData\": {\n        \"mimeType\": `audio/${$binary.data.fileExtension}`,\n        \"data\": $input.item.binary.data.data }\n      }\n    ]\n  }]\n}\n}}",
+        "options": {}
+      },
+      "id": "8cbb2210-a980-44b2-b8db-5a688759bf22",
+      "name": "Google Gemini Audio",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        2336,
+        224
+      ],
+      "typeVersion": 4.2,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-002:generateContent",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "googlePalmApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{\n{\n  \"contents\": [{\n    \"parts\":[\n      {\"text\": \"Describe this video\"},\n      {\"inlineData\": {\n        \"mimeType\": `video/${$binary.data.fileExtension}`,\n        \"data\": $input.item.binary.data.data }\n      }\n    ]\n  }]\n}\n}}",
+        "options": {}
+      },
+      "id": "618e1194-f5c8-4344-b728-3287ef819373",
+      "name": "Google Gemini Video",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        2336,
+        592
+      ],
+      "typeVersion": 4.2,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-1.5-pro-002",
+        "options": {}
+      },
+      "id": "d466df9c-175c-44a6-b50f-6d44500a1e49",
+      "name": "Google Gemini Chat Model1",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "position": [
+        2400,
+        1072
+      ],
+      "typeVersion": 1,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-1.5-pro-002",
+        "options": {}
+      },
+      "id": "b9c3e07c-10ca-456d-82f1-c5cf53788b31",
+      "name": "Google Gemini Chat Model2",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "position": [
+        2400,
+        1360
+      ],
+      "typeVersion": 1,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "2ec0e573-373b-4692-bfae-86b6d3b9aa9a",
+              "name": "text",
+              "type": "string",
+              "value": "={{ $json.candidates[0].content.parts[0].text }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6ff1100b-12b0-4821-a195-b6227667be04",
+      "name": "Format Response1",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        2576,
+        224
+      ],
+      "typeVersion": 3.4,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.text.body || $json.text }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "Summarize the user's message succinctly."
+            }
+          ]
+        }
+      },
+      "id": "3e9da094-1e12-45e7-b054-2d0c1baeb10e",
+      "name": "Text Summarizer",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "position": [
+        2416,
+        1232
+      ],
+      "typeVersion": 1.4,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=The user sent the following message\nmessage type: {{ $json.message_type }}\nmessage text or description:\n```{{ $json.message_text }}```\n{{ $json.message_caption ? `message caption: ${$json.message_caption.trim()}` : '' }}",
+        "options": {
+          "systemMessage": "You are a general knowledge assistant made available to the public via whatsapp. Help answer the user's query succiently and factually."
+        }
+      },
+      "id": "38c80622-89bb-438a-8447-ed3ad853f312",
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "position": [
+        2992,
+        768
+      ],
+      "typeVersion": 1.6,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "e8c8e9f9-02e5-484b-8487-68fa73717137",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        928,
+        688
+      ],
+      "id": "3ad803f4-acd8-45b4-b2da-193395118da4",
+      "name": "Webhook",
+      "webhookId": "0cdabf91-befe-40bd-bfb4-a9aa5b4cfa67"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "body.data",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        1168,
+        688
+      ],
+      "id": "c5a8335f-7408-4ba3-a604-38e1399c89ac",
+      "name": "Split Out"
+    }
+  ],
+  "origin": "n8n",
+  "pinData": {},
+  "repo": {
+    "owner": "sunrisewestern",
+    "name": "n8n-backup"
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "updatedAt": "2025-11-01T06:06:50.649Z",
+      "createdAt": "2025-11-01T06:06:50.649Z",
+      "role": "workflow:owner",
+      "workflowId": "zDwWBoczcGK3m3JC",
+      "projectId": "O3TKzz1LtWsv0pol"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-11-03T04:54:41.718Z",
+  "versionId": "41be7d0d-37ce-4a33-a447-fbbd67f20ec6"
+}
