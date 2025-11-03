@@ -1,0 +1,2298 @@
+{
+  "active": false,
+  "connections": {
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Delete a file",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Return",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n8n": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "isDiffOrNew",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Return": {
+      "main": [
+        []
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Get file data",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ],
+        [
+          {
+            "node": "isDeleted",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "github": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get File": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Workflows": {
+      "main": [
+        [
+          {
+            "node": "List files",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "isDeleted": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "List files": {
+      "main": [
+        [
+          {
+            "node": "github",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "File is new": {
+      "main": [
+        [
+          {
+            "node": "Create new file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "isDiffOrNew": {
+      "main": [
+        [
+          {
+            "node": "Check Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Status": {
+      "main": [
+        [
+          {
+            "node": "File is new",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "File is different",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Same file - Do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delete a file": {
+      "main": [
+        [
+          {
+            "node": "Return",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get file data": {
+      "main": [
+        [
+          {
+            "node": "If file too large",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create new file": {
+      "main": [
+        [
+          {
+            "node": "Return",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "node": "Create a message1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Execute Workflow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Workflow": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Create a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "File is different": {
+      "main": [
+        [
+          {
+            "node": "Edit existing file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If file too large": {
+      "main": [
+        [
+          {
+            "node": "Get File",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit existing file": {
+      "main": [
+        [
+          {
+            "node": "Return",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get many workflows": {
+      "main": [
+        [
+          {
+            "node": "Workflows",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "n8n",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "On clicking 'execute'": {
+      "main": [
+        [
+          {
+            "node": "Create a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Same file - Do nothing": {
+      "main": [
+        [
+          {
+            "node": "Return",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Workflow Trigger": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create a message": {
+      "main": [
+        [
+          {
+            "node": "Globals",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Globals": {
+      "main": [
+        [
+          {
+            "node": "Get many workflows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create a message2": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-11-03T04:44:18.516Z",
+  "id": "UC5rIDgNtGVR5DcU",
+  "isArchived": false,
+  "meta": {
+    "templateId": "5898",
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Automated n8n Workflow Backup to GitHub with Deletion Tracking",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "638dcc28-8b20-40e6-81fd-96efec4d4111",
+      "name": "On clicking 'execute'",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        848,
+        400
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "8d513345-6484-431f-afb7-7cf045c90f4f",
+              "name": "Done",
+              "type": "boolean",
+              "value": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "287eabd3-013d-41cd-a9c3-ae71b8d26ef9",
+      "name": "Return",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        2400,
+        1440
+      ],
+      "typeVersion": 3.3
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.download_url }}",
+        "options": {}
+      },
+      "id": "edc8da3b-fcf1-4487-8963-464c18c209b5",
+      "name": "Get File",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1520,
+        912
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 1,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "45ce825e-9fa6-430c-8931-9aaf22c42585",
+              "operator": {
+                "type": "string",
+                "operation": "empty",
+                "singleValue": true
+              },
+              "leftValue": "={{ $json.content }}",
+              "rightValue": ""
+            },
+            {
+              "id": "9619a55f-7fb1-4f24-b1a7-7aeb82365806",
+              "operator": {
+                "type": "string",
+                "operation": "notExists",
+                "singleValue": true
+              },
+              "leftValue": "={{ $json.error }}",
+              "rightValue": ""
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "63859d24-34b7-4545-a3fb-fe45b3678cef",
+      "name": "If file too large",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        1296,
+        928
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "jsCode": "const orderJsonKeys = (jsonObj) => {\n  const ordered = {};\n  Object.keys(jsonObj).sort().forEach(key => {\n    ordered[key] = jsonObj[key];\n  });\n  return ordered;\n}\n\n// Check if file returned with content\nif (Object.keys($input.all()[0].json).includes(\"content\")) {\n  // Decode base64 content and parse JSON\n  const origWorkflow = JSON.parse(Buffer.from($input.all()[0].json.content, 'base64').toString());\n  const n8nWorkflow = $input.all()[1].json;\n  \n  // Order JSON objects\n  const orderedOriginal = orderJsonKeys(origWorkflow);\n  const orderedActual = orderJsonKeys(n8nWorkflow);\n\n  // Determine difference\n  if (JSON.stringify(orderedOriginal) === JSON.stringify(orderedActual)) {\n    $input.all()[0].json.github_status = \"same\";\n  } else {\n    $input.all()[0].json.github_status = \"different\";\n    $input.all()[0].json.n8n_data_stringy = JSON.stringify(orderedActual, null, 2);\n  }\n  $input.all()[0].json.content_decoded = orderedOriginal;\n// No file returned / new workflow\n} else if (Object.keys($input.all()[0].json).includes(\"data\")) {\n  const origWorkflow = JSON.parse($input.all()[0].json.data);\n  const n8nWorkflow = $input.all()[1].json;\n  \n  // Order JSON objects\n  const orderedOriginal = orderJsonKeys(origWorkflow);\n  const orderedActual = orderJsonKeys(n8nWorkflow);\n\n  // Determine difference\n  if (JSON.stringify(orderedOriginal) === JSON.stringify(orderedActual)) {\n    $input.all()[0].json.github_status = \"same\";\n  } else {\n    $input.all()[0].json.github_status = \"different\";\n    $input.all()[0].json.n8n_data_stringy = JSON.stringify(orderedActual, null, 2);\n  }\n  $input.all()[0].json.content_decoded = orderedOriginal;\n\n} else {\n  // Order JSON object\n  const n8nWorkflow = $input.all()[1].json;\n  const orderedActual = orderJsonKeys(n8nWorkflow);\n  \n  // Proper formatting\n  $input.all()[0].json.github_status = \"new\";\n  $input.all()[0].json.n8n_data_stringy = JSON.stringify(orderedActual, null, 2);\n}\n\n// Return items\nreturn $input.all();"
+      },
+      "id": "8509afb5-c772-445d-af47-de54c9deae6e",
+      "name": "isDiffOrNew",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1520,
+        1184
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {},
+      "id": "ac50a21b-f850-495a-9e41-8fdd075c3c62",
+      "name": "Same file - Do nothing",
+      "type": "n8n-nodes-base.noOp",
+      "position": [
+        1952,
+        1360
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {},
+      "id": "293179e5-9ef0-4f75-b39c-987ebf13a9b5",
+      "name": "File is different",
+      "type": "n8n-nodes-base.noOp",
+      "position": [
+        1952,
+        1184
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {},
+      "id": "ab03b5e9-61eb-4512-9675-afd048a761c6",
+      "name": "File is new",
+      "type": "n8n-nodes-base.noOp",
+      "position": [
+        1952,
+        1008
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "owner": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $('Switch').item.json.repo.owner }}"
+        },
+        "repository": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $('Switch').item.json.repo.name }}"
+        },
+        "filePath": "={{$('Switch').first().json.id}}.json",
+        "fileContent": "={{$('isDiffOrNew').item.json[\"n8n_data_stringy\"]}}",
+        "commitMessage": "={{$('Switch').first().json.name}} ({{$json.github_status}})"
+      },
+      "id": "a0431fdb-41ff-4bf0-8618-c743d6be159e",
+      "name": "Create new file",
+      "type": "n8n-nodes-base.github",
+      "position": [
+        2176,
+        1008
+      ],
+      "webhookId": "93cca36a-a5f4-4919-b655-e0fa2cc2ca36",
+      "typeVersion": 1,
+      "credentials": {
+        "githubApi": {
+          "id": "Wti3MeKuUXm7WE47",
+          "name": "GitHub account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "operation": "edit",
+        "owner": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $('Switch').item.json.repo.owner }}"
+        },
+        "repository": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $('Switch').item.json.repo.name }}"
+        },
+        "filePath": "={{$('Switch').first().json.id}}.json",
+        "fileContent": "={{$('isDiffOrNew').item.json[\"n8n_data_stringy\"]}}",
+        "commitMessage": "={{$('Switch').first().json.name}} ({{$json.github_status}})"
+      },
+      "id": "e0a9e1f0-bd40-4009-8945-24a264ddbf0d",
+      "name": "Edit existing file",
+      "type": "n8n-nodes-base.github",
+      "position": [
+        2176,
+        1184
+      ],
+      "webhookId": "286cabce-a3ec-4202-9d94-d005502d73cc",
+      "typeVersion": 1,
+      "credentials": {
+        "githubApi": {
+          "id": "Wti3MeKuUXm7WE47",
+          "name": "GitHub account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {
+          "reset": "={{ $node[\"Loop Over Items\"].context[\"done\"] }}"
+        }
+      },
+      "id": "a4d50217-3d8c-48f3-a486-fb3c033fcef4",
+      "name": "Loop Over Items",
+      "type": "n8n-nodes-base.splitInBatches",
+      "position": [
+        2176,
+        512
+      ],
+      "typeVersion": 3
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 7
+            }
+          ]
+        }
+      },
+      "id": "4f529f31-26a2-4f19-b8f3-42ce583b11ad",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [
+        848,
+        608
+      ],
+      "typeVersion": 1.2
+    },
+    {
+      "parameters": {
+        "content": "## Backup to GitHub \nThis workflow will backup all instance workflows to GitHub and also deleted it if was deleted in n8n.\n\nThe files are saved `ID.json` for the filename.\n\n### Setup\nOpen `Globals` node and update the values below 👇\n\n- **repo.owner:** your Github username\n- **repo.name:** the name of your repository\n\n\nIf your username was `john-doe` and your repository was called `n8n-backups`:\n\n- repo.owner - john-doe\n- repo.name - n8n-backups\n\n\nThe workflow calls itself using a subworkflow, to help reduce memory usage.",
+        "height": 601,
+        "width": 371,
+        "color": 4
+      },
+      "id": "c8c0bc8a-3538-4c63-8882-3dd846830649",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        368,
+        240
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "operation": "get",
+        "owner": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $json.repo.owner }}"
+        },
+        "repository": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $json.repo.name }}"
+        },
+        "filePath": "={{ $('Switch').item.json.id }}.json",
+        "asBinaryProperty": false,
+        "additionalParameters": {}
+      },
+      "id": "d527bac6-971b-4be7-8481-97dd023e85e1",
+      "name": "Get file data",
+      "type": "n8n-nodes-base.github",
+      "position": [
+        1072,
+        928
+      ],
+      "webhookId": "5cf07ee9-70c6-48bf-b370-534315f2d48e",
+      "typeVersion": 1,
+      "alwaysOutputData": true,
+      "credentials": {
+        "githubApi": {
+          "id": "Wti3MeKuUXm7WE47",
+          "name": "GitHub account"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "inputSource": "passthrough"
+      },
+      "id": "6c7b66fa-bfdd-47ea-9161-835415d116dd",
+      "name": "Execute Workflow Trigger",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "position": [
+        496,
+        1312
+      ],
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $workflow.id }}"
+        },
+        "workflowInputs": {
+          "value": {},
+          "schema": [],
+          "mappingMode": "defineBelow",
+          "matchingColumns": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "mode": "each",
+        "options": {}
+      },
+      "id": "a3021ade-6778-49df-8ad4-4d43f28d51e2",
+      "name": "Execute Workflow",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "position": [
+        2400,
+        512
+      ],
+      "typeVersion": 1.2
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "operation": "list",
+        "owner": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $('Globals').item.json.repo.owner }}"
+        },
+        "repository": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $('Globals').item.json.repo.name }}"
+        }
+      },
+      "id": "fba69d35-d05b-45a1-bdd9-93a83fddf63e",
+      "name": "List files",
+      "type": "n8n-nodes-base.github",
+      "position": [
+        1728,
+        608
+      ],
+      "webhookId": "244ea8da-851f-4afb-980c-5e5973b6a1af",
+      "executeOnce": true,
+      "typeVersion": 1.1,
+      "credentials": {
+        "githubApi": {
+          "id": "Wti3MeKuUXm7WE47",
+          "name": "GitHub account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "8f6b31b0-a75c-4299-a530-d15b3ff65c9a",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "leftValue": "={{ $json.origin }}",
+                    "rightValue": "n8n"
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "n8n"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "09e36861-1120-4343-8d38-4797e9d67eec",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "leftValue": "={{ $json.origin }}",
+                    "rightValue": "github"
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "github"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f235efb7-3ff9-497d-bc32-c94f38f76183",
+      "name": "Switch",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        720,
+        1312
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "filters": {},
+        "requestOptions": {
+          "allowUnauthorizedCerts": true
+        }
+      },
+      "id": "7c35c3da-b364-4ad0-b192-3691cb73eb6f",
+      "name": "Get many workflows",
+      "type": "n8n-nodes-base.n8n",
+      "position": [
+        1296,
+        512
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "n8nApi": {
+          "id": "WUvIsJBmgtEOEjs6",
+          "name": "n8n account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "options": {}
+      },
+      "id": "12a90225-5a32-4b69-bee6-d61bc4369eb2",
+      "name": "Workflows",
+      "type": "n8n-nodes-base.aggregate",
+      "position": [
+        1520,
+        608
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {},
+      "id": "799e5c1f-43aa-4375-b8f2-25a3335ddb18",
+      "name": "Merge",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        1296,
+        1184
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "aea200f9-9f83-4e4e-a965-65fddcbb6a5f",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "leftValue": "={{$json.github_status}}",
+                    "rightValue": "new"
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "new"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "706ebf35-6f74-43b6-9f98-94cf14107947",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "leftValue": "={{$json.github_status}}",
+                    "rightValue": "different"
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "different"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "30c8c5a8-269f-424a-93ed-d2cbe52acf7c",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "leftValue": "={{$json.github_status}}",
+                    "rightValue": "same"
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "same"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5acad04e-0c07-4663-be6f-d8cdf4ecee4e",
+      "name": "Check Status",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        1728,
+        1184
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "jsCode": "const workflows = $input.first().json.workflows;\n\nconst some = workflows.some(x => x.id === $input.first().json.name.split(\".\")[0])\n\nreturn [{json: { isDeleted: !some }}];"
+      },
+      "id": "a5979392-d277-4580-aa16-09d18e3eb577",
+      "name": "isDeleted",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1520,
+        1504
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "operation": "delete",
+        "owner": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $('Switch').item.json.repo.owner }}"
+        },
+        "repository": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $('Switch').item.json.repo.name }}"
+        },
+        "filePath": "={{$('Switch').first().json.name}}",
+        "commitMessage": "={{$('Switch').first().json.name}} (deleted)"
+      },
+      "id": "c08dde95-3a3a-4ac1-a92b-c9bcd5c7743b",
+      "name": "Delete a file",
+      "type": "n8n-nodes-base.github",
+      "position": [
+        2176,
+        1632
+      ],
+      "webhookId": "592f888e-3e41-49ce-b88a-d73f8756eac8",
+      "typeVersion": 1.1,
+      "credentials": {
+        "githubApi": {
+          "id": "Wti3MeKuUXm7WE47",
+          "name": "GitHub account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "bb927e0c-f27b-4dce-80df-8d7611467045",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              },
+              "leftValue": "={{ $json.isDeleted }}",
+              "rightValue": ""
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1e769761-5f93-4d67-b801-e2d6a8443aed",
+      "name": "If",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        1728,
+        1504
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5e73d2e7-4b1a-4180-8af2-047e52eb8a0a",
+              "name": "repo.owner",
+              "type": "string",
+              "value": "={{ $('Globals').item.json.repo.owner }}"
+            },
+            {
+              "id": "22445c28-5431-45a5-86ca-0ab2ff26cff5",
+              "name": "repo.name",
+              "type": "string",
+              "value": "={{ $('Globals').item.json.repo.name }}"
+            },
+            {
+              "id": "232d9947-a43f-48a9-b385-da1aa8f5139e",
+              "name": "origin",
+              "type": "string",
+              "value": "n8n"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "id": "39ad6ee3-acde-4019-b850-7a8add4e795a",
+      "name": "n8n",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1952,
+        400
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5e73d2e7-4b1a-4180-8af2-047e52eb8a0a",
+              "name": "repo.owner",
+              "type": "string",
+              "value": "={{ $('Globals').item.json.repo.owner }}"
+            },
+            {
+              "id": "22445c28-5431-45a5-86ca-0ab2ff26cff5",
+              "name": "repo.name",
+              "type": "string",
+              "value": "={{ $('Globals').item.json.repo.name }}"
+            },
+            {
+              "id": "232d9947-a43f-48a9-b385-da1aa8f5139e",
+              "name": "origin",
+              "type": "string",
+              "value": "github"
+            },
+            {
+              "id": "456ec816-8c15-498b-bbc5-a96abce95d59",
+              "name": "workflows",
+              "type": "array",
+              "value": "={{ $('Workflows').item.json.data }}"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "id": "fc83af27-10a8-4ec4-94e7-15ab074c8ab6",
+      "name": "github",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1952,
+        608
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "content": "## Edit this node 👇",
+        "height": 80,
+        "width": 150,
+        "color": 4
+      },
+      "id": "99e64b8f-3446-4b74-8ce6-5eccd47d0aa7",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1056,
+        368
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Main workflow loop",
+        "height": 601,
+        "width": 1831,
+        "color": 7
+      },
+      "id": "734112c4-9175-4f50-a2d6-7970d2938624",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        768,
+        240
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Subworkflow",
+        "height": 941,
+        "width": 2231,
+        "color": 6
+      },
+      "id": "0dbfd9fc-e5c8-4a98-8435-5a44c1f3d56d",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        368,
+        864
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "message": "=Starting Workflow Backup [{{ $execution.id }}]",
+        "additionalFields": {},
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gotify",
+      "typeVersion": 1,
+      "position": [
+        1024,
+        528
+      ],
+      "id": "afa7e28b-6abe-4017-960c-77ad07962f7d",
+      "name": "Create a message",
+      "credentials": {
+        "gotifyApi": {
+          "id": "izDANgohXTdEWuKG",
+          "name": "Gotify account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "6cf546c5-5737-4dbd-851b-17d68e0a3780",
+              "name": "repo.owner",
+              "type": "string",
+              "value": "sunrisewestern"
+            },
+            {
+              "id": "452efa28-2dc6-4ea3-a7a2-c35d100d0382",
+              "name": "repo.name",
+              "type": "string",
+              "value": "n8n-backup"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e6675677-07ac-48d9-a920-58065cc79d77",
+      "name": "Globals",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1152,
+        528
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "message": "=✅ Backup has completed - {{ $('n8n').all().length }} workflows have been processed.",
+        "additionalFields": {},
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gotify",
+      "typeVersion": 1,
+      "position": [
+        2352,
+        288
+      ],
+      "id": "ce489024-5407-401b-8122-8704c3e9da07",
+      "name": "Create a message1",
+      "credentials": {
+        "gotifyApi": {
+          "id": "izDANgohXTdEWuKG",
+          "name": "Gotify account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "message": "=:x: Failed to backup {{ $('Loop Over Items').item.json.id }}",
+        "additionalFields": {},
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gotify",
+      "typeVersion": 1,
+      "position": [
+        2400,
+        720
+      ],
+      "id": "249766df-e93e-4108-be18-3d74b3a9f284",
+      "name": "Create a message2",
+      "credentials": {
+        "gotifyApi": {
+          "id": "izDANgohXTdEWuKG",
+          "name": "Gotify account"
+        }
+      }
+    }
+  ],
+  "origin": "n8n",
+  "pinData": {
+    "Execute Workflow Trigger": [
+      {
+        "json": {
+          "updatedAt": "2025-11-01T18:20:28.686Z",
+          "createdAt": "2025-11-01T06:06:50.649Z",
+          "id": "zDwWBoczcGK3m3JC",
+          "name": "meta ray ban gemini",
+          "active": false,
+          "isArchived": false,
+          "nodes": [
+            {
+              "parameters": {
+                "resource": "media",
+                "operation": "mediaUrlGet",
+                "mediaGetId": "={{ $json.audio.id }}"
+              },
+              "id": "4e8375ac-a9bd-434f-88ea-fc53486ed34b",
+              "name": "Get Audio URL",
+              "type": "n8n-nodes-base.whatsApp",
+              "position": [
+                1728,
+                224
+              ],
+              "typeVersion": 1,
+              "webhookId": "a0acc1f5-b633-4383-947e-e7faac1eda9c"
+            },
+            {
+              "parameters": {
+                "resource": "media",
+                "operation": "mediaUrlGet",
+                "mediaGetId": "={{ $json.video.id }}"
+              },
+              "id": "0b10b152-7b63-4c65-a88f-e381160af625",
+              "name": "Get Video URL",
+              "type": "n8n-nodes-base.whatsApp",
+              "position": [
+                1728,
+                592
+              ],
+              "typeVersion": 1,
+              "webhookId": "d79e44e4-b586-43ae-aa3a-6b5628530314",
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "resource": "media",
+                "operation": "mediaUrlGet",
+                "mediaGetId": "={{ $json.image.id }}"
+              },
+              "id": "0fbf3563-595e-426f-b0ce-22fb46fc267a",
+              "name": "Get Image URL",
+              "type": "n8n-nodes-base.whatsApp",
+              "position": [
+                1728,
+                928
+              ],
+              "typeVersion": 1,
+              "webhookId": "cd79c394-4048-4127-91bc-39bcaaa16559",
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "url": "={{ $json.url }}",
+                "authentication": "predefinedCredentialType",
+                "nodeCredentialType": "whatsAppApi",
+                "options": {}
+              },
+              "id": "c565d153-dca3-41bc-8d3c-bd3e60a24cce",
+              "name": "Download Video",
+              "type": "n8n-nodes-base.httpRequest",
+              "position": [
+                1888,
+                592
+              ],
+              "typeVersion": 4.2,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "url": "={{ $json.url }}",
+                "authentication": "predefinedCredentialType",
+                "nodeCredentialType": "whatsAppApi",
+                "options": {}
+              },
+              "id": "4d134f8d-b5c7-4ad5-8b89-d3d384ce7c39",
+              "name": "Download Audio",
+              "type": "n8n-nodes-base.httpRequest",
+              "position": [
+                1888,
+                224
+              ],
+              "typeVersion": 4.2,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "url": "={{ $json.url }}",
+                "authentication": "predefinedCredentialType",
+                "nodeCredentialType": "whatsAppApi",
+                "options": {}
+              },
+              "id": "cf676a44-ff19-4490-947a-281861b12678",
+              "name": "Download Image",
+              "type": "n8n-nodes-base.httpRequest",
+              "position": [
+                1888,
+                928
+              ],
+              "typeVersion": 4.2,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "sessionIdType": "customKey",
+                "sessionKey": "=whatsapp-tutorial-{{ $json.from }}"
+              },
+              "id": "32e4bebe-9ef9-4d63-9ba9-4d911f352005",
+              "name": "Window Buffer Memory",
+              "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+              "position": [
+                3088,
+                944
+              ],
+              "typeVersion": 1.2,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "assignments": {
+                  "assignments": [
+                    {
+                      "id": "d990cbd6-a408-4ec4-a889-41be698918d9",
+                      "name": "message_type",
+                      "type": "string",
+                      "value": "={{ $('Split Out Message Parts').item.json.type }}"
+                    },
+                    {
+                      "id": "23b785c3-f38e-4706-80b7-51f333bba3bd",
+                      "name": "message_text",
+                      "type": "string",
+                      "value": "={{ $json.text }}"
+                    },
+                    {
+                      "id": "6e83f9a7-cf75-4182-b2d2-3151e8af76b9",
+                      "name": "from",
+                      "type": "string",
+                      "value": "={{ $('WhatsApp Trigger').item.json.messages[0].from }}"
+                    },
+                    {
+                      "id": "da4b602a-28ca-4b0d-a747-c3d3698c3731",
+                      "name": "message_caption",
+                      "type": "string",
+                      "value": "={{ $('Redirect Message Types').item.json.video && $('Redirect Message Types').item.json.video.caption || '' }}\n{{ $('Redirect Message Types').item.json.image && $('Redirect Message Types').item.json.image.caption || ''}}\n{{ $('Redirect Message Types').item.json.audio && $('Redirect Message Types').item.json.audio.caption || ''}}"
+                    }
+                  ]
+                },
+                "options": {}
+              },
+              "id": "66c2ae34-5c5c-458e-9593-82567a4a54ff",
+              "name": "Get User's Message",
+              "type": "n8n-nodes-base.set",
+              "position": [
+                2800,
+                768
+              ],
+              "typeVersion": 3.4,
+              "disabled": true
+            },
+            {
+              "parameters": {},
+              "id": "e1056315-cd19-4d5b-a52b-b10a1404a636",
+              "name": "Wikipedia",
+              "type": "@n8n/n8n-nodes-langchain.toolWikipedia",
+              "position": [
+                3216,
+                944
+              ],
+              "typeVersion": 1,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "rules": {
+                  "values": [
+                    {
+                      "conditions": {
+                        "options": {
+                          "caseSensitive": true,
+                          "leftValue": "",
+                          "typeValidation": "strict",
+                          "version": 2
+                        },
+                        "conditions": [
+                          {
+                            "id": "a0e72f26-389f-4d68-a522-9012ae9172f1",
+                            "leftValue": "={{ $json.type }}",
+                            "rightValue": "ptt",
+                            "operator": {
+                              "type": "string",
+                              "operation": "equals",
+                              "name": "filter.operator.equals"
+                            }
+                          }
+                        ],
+                        "combinator": "and"
+                      },
+                      "renameOutput": true,
+                      "outputKey": "Audio Message"
+                    },
+                    {
+                      "conditions": {
+                        "options": {
+                          "caseSensitive": true,
+                          "leftValue": "",
+                          "typeValidation": "strict",
+                          "version": 2
+                        },
+                        "conditions": [
+                          {
+                            "id": "1fb894b4-5abb-45a6-b651-05f70aaadd43",
+                            "leftValue": "={{ $json.type }}",
+                            "rightValue": "video",
+                            "operator": {
+                              "type": "string",
+                              "operation": "equals",
+                              "name": "filter.operator.equals"
+                            }
+                          }
+                        ],
+                        "combinator": "and"
+                      },
+                      "renameOutput": true,
+                      "outputKey": "Video Message"
+                    },
+                    {
+                      "conditions": {
+                        "options": {
+                          "caseSensitive": true,
+                          "leftValue": "",
+                          "typeValidation": "strict",
+                          "version": 2
+                        },
+                        "conditions": [
+                          {
+                            "id": "5671e03d-9ae0-4c50-80e3-10b52227a22d",
+                            "leftValue": "={{ $json.type }}",
+                            "rightValue": "image",
+                            "operator": {
+                              "type": "string",
+                              "operation": "equals",
+                              "name": "filter.operator.equals"
+                            }
+                          }
+                        ],
+                        "combinator": "and"
+                      },
+                      "renameOutput": true,
+                      "outputKey": "Image Message"
+                    }
+                  ]
+                },
+                "options": {
+                  "fallbackOutput": "extra",
+                  "renameFallbackOutput": "Text Message"
+                }
+              },
+              "id": "194a8bf3-3270-4e13-88d2-70f498200c43",
+              "name": "Redirect Message Types",
+              "type": "n8n-nodes-base.switch",
+              "position": [
+                1456,
+                768
+              ],
+              "typeVersion": 3.2
+            },
+            {
+              "parameters": {
+                "content": "## 1. WhatsApp Trigger\n[Learn more about the WhatsApp Trigger](https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger)\n\nTo start receiving WhatsApp messages in your workflow, there are quite a few steps involved so be sure to follow the n8n documentation. When we recieve WhatsApp messages, we'll split out the messages part of the payload and handle them depending on the message type using the Switch node.",
+                "height": 245.72612197928734,
+                "width": 335.8011507479863,
+                "color": 7
+              },
+              "id": "55e3f0f6-224d-4294-a394-0fea97ed711f",
+              "name": "Sticky Note",
+              "type": "n8n-nodes-base.stickyNote",
+              "position": [
+                928,
+                400
+              ],
+              "typeVersion": 1
+            },
+            {
+              "parameters": {
+                "content": "### 2. Transcribe Audio Messages 💬\nFor audio messages or voice notes, we can use GPT4o to transcribe the message for our AI Agent.",
+                "height": 97.23360184119679,
+                "width": 356.65822784810103,
+                "color": 7
+              },
+              "id": "11b3110b-2795-4a72-972b-11e6c2a8278f",
+              "name": "Sticky Note1",
+              "type": "n8n-nodes-base.stickyNote",
+              "position": [
+                1728,
+                112
+              ],
+              "typeVersion": 1,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "content": "### 3. Describe Video Messages 🎬\nFor video messages, one approach is to use a Multimodal Model that supports parsing video. Currently, Google Gemini is a well-tested service for this task. We'll need to use the HTTP request node as currrently n8n's LLM node doesn't currently support video binary types.",
+                "height": 127.13555811277331,
+                "width": 492.5258918296896,
+                "color": 7
+              },
+              "id": "df549f15-ba49-4a96-b2a6-bafb3d081139",
+              "name": "Sticky Note2",
+              "type": "n8n-nodes-base.stickyNote",
+              "position": [
+                1728,
+                432
+              ],
+              "typeVersion": 1,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "content": "### 4. Analyse Image Messages 🏞️\nFor image messages, we can use GPT4o to explain what is going on in the message for our AI Agent.",
+                "height": 97.23360184119679,
+                "width": 356.65822784810103,
+                "color": 7
+              },
+              "id": "b010ed69-3735-456d-b5a8-15f00aad124f",
+              "name": "Sticky Note3",
+              "type": "n8n-nodes-base.stickyNote",
+              "position": [
+                1728,
+                800
+              ],
+              "typeVersion": 1,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "content": "### 5. Text summarizer 📘\nFor text messages, we don't need to do much transformation but it's nice to summarize for easier understanding.",
+                "height": 97.23360184119679,
+                "width": 428.24395857307246,
+                "color": 7
+              },
+              "id": "58563aa2-9367-4dcb-9b56-4893c8d1d831",
+              "name": "Sticky Note4",
+              "type": "n8n-nodes-base.stickyNote",
+              "position": [
+                1728,
+                1104
+              ],
+              "typeVersion": 1,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "amount": 0
+              },
+              "id": "283ba8b5-3f45-46d9-92fa-4a1c2f2df4b2",
+              "name": "Get Text",
+              "type": "n8n-nodes-base.wait",
+              "position": [
+                1728,
+                1232
+              ],
+              "webhookId": "cc44aeb0-bf71-44e6-a464-feaa38d26d85",
+              "typeVersion": 1.1,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "content": "## 6. Generate Response with AI Agent\n[Read more about the AI Agent node](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent)\n\nNow that we'll able to handle all message types from WhatsApp, we could do pretty much anything we want with it by giving it our AI agent. Examples could include handling customer support, helping to book appointments or verifying documents.\n\nIn this demonstration, we'll just create a simple AI Agent which responds to our WhatsApp user's message and returns a simple response.",
+                "height": 273.14522439585744,
+                "width": 500.7797468354428,
+                "color": 7
+              },
+              "id": "001efa37-d1da-421a-8d41-09789b0fffa8",
+              "name": "Sticky Note5",
+              "type": "n8n-nodes-base.stickyNote",
+              "position": [
+                2992,
+                448
+              ],
+              "typeVersion": 1,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "content": "## 7. Respond to WhatsApp User\n[Read more about the Whatsapp node](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/)\n\nTo close out this demonstration, we'll simple send a simple text message back to the user. Note that this WhatsApp node also allows you to send images, audio, videos, documents as well as location!",
+                "height": 211.45776754890682,
+                "width": 384.12151898734186,
+                "color": 7
+              },
+              "id": "ce6ee62b-ace9-4b39-a4b5-7446437e63a5",
+              "name": "Sticky Note6",
+              "type": "n8n-nodes-base.stickyNote",
+              "position": [
+                3456,
+                1040
+              ],
+              "typeVersion": 1,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "operation": "send",
+                "phoneNumberId": "477115632141067",
+                "recipientPhoneNumber": "={{ $('WhatsApp Trigger').item.json.messages[0].from }}",
+                "textBody": "={{ $json.output }}",
+                "additionalFields": {}
+              },
+              "id": "1fe4e440-4062-4c53-b45a-19f3b5f05c81",
+              "name": "Respond to User",
+              "type": "n8n-nodes-base.whatsApp",
+              "position": [
+                3456,
+                864
+              ],
+              "typeVersion": 1,
+              "webhookId": "9b5cfea8-6d4d-4a2a-9e56-f57204bd9440",
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "content": "## Try It Out!\n\n### This n8n template demonstrates the beginnings of building your own n8n-powered WhatsApp chatbot! Under the hood, utilise n8n's powerful AI features to handle different message types and use an AI agent to respond to the user. A powerful tool for any use-case!\n\n* Incoming WhatsApp Trigger provides a way to get messages into the workflow.\n* The message received is extracted and sent through 1 of 4 branches for processing.\n* Each processing branch uses AI to analyse, summarize or transcribe the message so that the AI agent can understand it.\n* The AI Agent is used to generate a response generally and uses a wikipedia tool for more complex queries.\n* Finally, the response message is sent back to the WhatsApp user using the WhatsApp node.\n\n### Need Help?\nJoin the [Discord](https://discord.com/invite/XPKeKXeB7d) or ask in the [Forum](https://community.n8n.io/)!",
+                "height": 562.8608514850005,
+                "width": 470.66513233601853
+              },
+              "id": "d0ed9c07-bed8-44e6-8fa1-eb09c1342470",
+              "name": "Sticky Note7",
+              "type": "n8n-nodes-base.stickyNote",
+              "position": [
+                368,
+                240
+              ],
+              "typeVersion": 1
+            },
+            {
+              "parameters": {
+                "content": "### Activate workflow to use!\nYou must activate the workflow to use this WhatsApp Chabot. If you are self-hosting, ensure WhatsApp is able to connect to your server.",
+                "height": 96.0144533433243,
+                "width": 473.28063885246377,
+                "color": 5
+              },
+              "id": "a09515a8-7be1-4b30-a45b-f827082ee350",
+              "name": "Sticky Note8",
+              "type": "n8n-nodes-base.stickyNote",
+              "position": [
+                368,
+                832
+              ],
+              "typeVersion": 1
+            },
+            {
+              "parameters": {
+                "promptType": "define",
+                "text": "Here is an image sent by the user. Describe the image and transcribe any text visible in the image.",
+                "messages": {
+                  "messageValues": [
+                    {
+                      "type": "HumanMessagePromptTemplate",
+                      "messageType": "imageBinary"
+                    }
+                  ]
+                }
+              },
+              "id": "de167d60-65f4-41d3-be50-be00eea5c621",
+              "name": "Image Explainer",
+              "type": "@n8n/n8n-nodes-langchain.chainLlm",
+              "position": [
+                2416,
+                928
+              ],
+              "typeVersion": 1.4,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "assignments": {
+                  "assignments": [
+                    {
+                      "id": "2ec0e573-373b-4692-bfae-86b6d3b9aa9a",
+                      "name": "text",
+                      "type": "string",
+                      "value": "={{ $json.candidates[0].content.parts[0].text }}"
+                    }
+                  ]
+                },
+                "options": {}
+              },
+              "id": "4462a8e3-1734-4128-951d-7d7bbf8fa1d9",
+              "name": "Format Response",
+              "type": "n8n-nodes-base.set",
+              "position": [
+                2576,
+                592
+              ],
+              "typeVersion": 3.4,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "content": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n### 🚨 Google Gemini Required!\nNot using Gemini? Feel free to swap this out for any Multimodal Model that supports Video.",
+                "height": 305.35604142692785,
+                "width": 260
+              },
+              "id": "9a6a27cf-ad30-4737-8893-6351552e3410",
+              "name": "Sticky Note9",
+              "type": "n8n-nodes-base.stickyNote",
+              "position": [
+                2256,
+                560
+              ],
+              "typeVersion": 1,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "modelName": "models/gemini-1.5-pro-002",
+                "options": {}
+              },
+              "id": "48c8262a-abde-461e-97af-d3fda0d4e5bd",
+              "name": "Google Gemini Chat Model",
+              "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+              "position": [
+                2960,
+                944
+              ],
+              "typeVersion": 1,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "content": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n### 🚨 Google Gemini Required!\nNot using Gemini? Feel free to swap this out for any Multimodal Model that supports Audio.",
+                "height": 294.22048331415436,
+                "width": 260
+              },
+              "id": "c65bc014-9faa-447d-b728-5b1e87ba12ea",
+              "name": "Sticky Note10",
+              "type": "n8n-nodes-base.stickyNote",
+              "position": [
+                2256,
+                208
+              ],
+              "typeVersion": 1,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "method": "POST",
+                "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-002:generateContent",
+                "authentication": "predefinedCredentialType",
+                "nodeCredentialType": "googlePalmApi",
+                "sendHeaders": true,
+                "headerParameters": {
+                  "parameters": [
+                    {
+                      "name": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ]
+                },
+                "sendBody": true,
+                "specifyBody": "json",
+                "jsonBody": "={{\n{\n  \"contents\": [{\n    \"parts\":[\n      {\"text\": \"Transcribe this audio\"},\n      {\"inlineData\": {\n        \"mimeType\": `audio/${$binary.data.fileExtension}`,\n        \"data\": $input.item.binary.data.data }\n      }\n    ]\n  }]\n}\n}}",
+                "options": {}
+              },
+              "id": "8cbb2210-a980-44b2-b8db-5a688759bf22",
+              "name": "Google Gemini Audio",
+              "type": "n8n-nodes-base.httpRequest",
+              "position": [
+                2336,
+                224
+              ],
+              "typeVersion": 4.2,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "method": "POST",
+                "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-002:generateContent",
+                "authentication": "predefinedCredentialType",
+                "nodeCredentialType": "googlePalmApi",
+                "sendHeaders": true,
+                "headerParameters": {
+                  "parameters": [
+                    {
+                      "name": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ]
+                },
+                "sendBody": true,
+                "specifyBody": "json",
+                "jsonBody": "={{\n{\n  \"contents\": [{\n    \"parts\":[\n      {\"text\": \"Describe this video\"},\n      {\"inlineData\": {\n        \"mimeType\": `video/${$binary.data.fileExtension}`,\n        \"data\": $input.item.binary.data.data }\n      }\n    ]\n  }]\n}\n}}",
+                "options": {}
+              },
+              "id": "618e1194-f5c8-4344-b728-3287ef819373",
+              "name": "Google Gemini Video",
+              "type": "n8n-nodes-base.httpRequest",
+              "position": [
+                2336,
+                592
+              ],
+              "typeVersion": 4.2,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "modelName": "models/gemini-1.5-pro-002",
+                "options": {}
+              },
+              "id": "d466df9c-175c-44a6-b50f-6d44500a1e49",
+              "name": "Google Gemini Chat Model1",
+              "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+              "position": [
+                2400,
+                1072
+              ],
+              "typeVersion": 1,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "modelName": "models/gemini-1.5-pro-002",
+                "options": {}
+              },
+              "id": "b9c3e07c-10ca-456d-82f1-c5cf53788b31",
+              "name": "Google Gemini Chat Model2",
+              "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+              "position": [
+                2400,
+                1360
+              ],
+              "typeVersion": 1,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "assignments": {
+                  "assignments": [
+                    {
+                      "id": "2ec0e573-373b-4692-bfae-86b6d3b9aa9a",
+                      "name": "text",
+                      "type": "string",
+                      "value": "={{ $json.candidates[0].content.parts[0].text }}"
+                    }
+                  ]
+                },
+                "options": {}
+              },
+              "id": "6ff1100b-12b0-4821-a195-b6227667be04",
+              "name": "Format Response1",
+              "type": "n8n-nodes-base.set",
+              "position": [
+                2576,
+                224
+              ],
+              "typeVersion": 3.4,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "promptType": "define",
+                "text": "={{ $json.text.body || $json.text }}",
+                "messages": {
+                  "messageValues": [
+                    {
+                      "message": "Summarize the user's message succinctly."
+                    }
+                  ]
+                }
+              },
+              "id": "3e9da094-1e12-45e7-b054-2d0c1baeb10e",
+              "name": "Text Summarizer",
+              "type": "@n8n/n8n-nodes-langchain.chainLlm",
+              "position": [
+                2416,
+                1232
+              ],
+              "typeVersion": 1.4,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "promptType": "define",
+                "text": "=The user sent the following message\nmessage type: {{ $json.message_type }}\nmessage text or description:\n```{{ $json.message_text }}```\n{{ $json.message_caption ? `message caption: ${$json.message_caption.trim()}` : '' }}",
+                "options": {
+                  "systemMessage": "You are a general knowledge assistant made available to the public via whatsapp. Help answer the user's query succiently and factually."
+                }
+              },
+              "id": "38c80622-89bb-438a-8447-ed3ad853f312",
+              "name": "AI Agent",
+              "type": "@n8n/n8n-nodes-langchain.agent",
+              "position": [
+                2992,
+                768
+              ],
+              "typeVersion": 1.6,
+              "disabled": true
+            },
+            {
+              "parameters": {
+                "httpMethod": "POST",
+                "path": "e8c8e9f9-02e5-484b-8487-68fa73717137",
+                "options": {}
+              },
+              "type": "n8n-nodes-base.webhook",
+              "typeVersion": 2.1,
+              "position": [
+                928,
+                688
+              ],
+              "id": "3ad803f4-acd8-45b4-b2da-193395118da4",
+              "name": "Webhook",
+              "webhookId": "0cdabf91-befe-40bd-bfb4-a9aa5b4cfa67"
+            },
+            {
+              "parameters": {
+                "fieldToSplitOut": "body.data",
+                "options": {}
+              },
+              "type": "n8n-nodes-base.splitOut",
+              "typeVersion": 1,
+              "position": [
+                1168,
+                688
+              ],
+              "id": "c5a8335f-7408-4ba3-a604-38e1399c89ac",
+              "name": "Split Out"
+            }
+          ],
+          "connections": {
+            "AI Agent": {
+              "main": [
+                [
+                  {
+                    "node": "Respond to User",
+                    "type": "main",
+                    "index": 0
+                  }
+                ]
+              ]
+            },
+            "Get Text": {
+              "main": [
+                [
+                  {
+                    "node": "Text Summarizer",
+                    "type": "main",
+                    "index": 0
+                  }
+                ]
+              ]
+            },
+            "Wikipedia": {
+              "ai_tool": [
+                [
+                  {
+                    "node": "AI Agent",
+                    "type": "ai_tool",
+                    "index": 0
+                  }
+                ]
+              ]
+            },
+            "Get Audio URL": {
+              "main": [
+                [
+                  {
+                    "node": "Download Audio",
+                    "type": "main",
+                    "index": 0
+                  }
+                ]
+              ]
+            },
+            "Get Image URL": {
+              "main": [
+                [
+                  {
+                    "node": "Download Image",
+                    "type": "main",
+                    "index": 0
+                  }
+                ]
+              ]
+            },
+            "Get Video URL": {
+              "main": [
+                [
+                  {
+                    "node": "Download Video",
+                    "type": "main",
+                    "index": 0
+                  }
+                ]
+              ]
+            },
+            "Download Audio": {
+              "main": [
+                [
+                  {
+                    "node": "Google Gemini Audio",
+                    "type": "main",
+                    "index": 0
+                  }
+                ]
+              ]
+            },
+            "Download Image": {
+              "main": [
+                [
+                  {
+                    "node": "Image Explainer",
+                    "type": "main",
+                    "index": 0
+                  }
+                ]
+              ]
+            },
+            "Download Video": {
+              "main": [
+                [
+                  {
+                    "node": "Google Gemini Video",
+                    "type": "main",
+                    "index": 0
+                  }
+                ]
+              ]
+            },
+            "Format Response": {
+              "main": [
+                [
+                  {
+                    "node": "Get User's Message",
+                    "type": "main",
+                    "index": 0
+                  }
+                ]
+              ]
+            },
+            "Image Explainer": {
+              "main": [
+                [
+                  {
+                    "node": "Get User's Message",
+                    "type": "main",
+                    "index": 0
+                  }
+                ]
+              ]
+            },
+            "Text Summarizer": {
+              "main": [
+                [
+                  {
+                    "node": "Get User's Message",
+                    "type": "main",
+                    "index": 0
+                  }
+                ]
+              ]
+            },
+            "Format Response1": {
+              "main": [
+                [
+                  {
+                    "node": "Get User's Message",
+                    "type": "main",
+                    "index": 0
+                  }
+                ]
+              ]
+            },
+            "Get User's Message": {
+              "main": [
+                [
+                  {
+                    "node": "AI Agent",
+                    "type": "main",
+                    "index": 0
+                  }
+                ]
+              ]
+            },
+            "Google Gemini Audio": {
+              "main": [
+                [
+                  {
+                    "node": "Format Response1",
+                    "type": "main",
+                    "index": 0
+                  }
+                ]
+              ]
+            },
+            "Google Gemini Video": {
+              "main": [
+                [
+                  {
+                    "node": "Format Response",
+                    "type": "main",
+                    "index": 0
+                  }
+                ]
+              ]
+            },
+            "Window Buffer Memory": {
+              "ai_memory": [
+                [
+                  {
+                    "node": "AI Agent",
+                    "type": "ai_memory",
+                    "index": 0
+                  }
+                ]
+              ]
+            },
+            "Redirect Message Types": {
+              "main": [
+                [
+                  {
+                    "node": "Get Audio URL",
+                    "type": "main",
+                    "index": 0
+                  }
+                ],
+                [],
+                [],
+                [
+                  {
+                    "node": "Get Text",
+                    "type": "main",
+                    "index": 0
+                  }
+                ]
+              ]
+            },
+            "Google Gemini Chat Model": {
+              "ai_languageModel": [
+                [
+                  {
+                    "node": "AI Agent",
+                    "type": "ai_languageModel",
+                    "index": 0
+                  }
+                ]
+              ]
+            },
+            "Google Gemini Chat Model1": {
+              "ai_languageModel": [
+                [
+                  {
+                    "node": "Image Explainer",
+                    "type": "ai_languageModel",
+                    "index": 0
+                  }
+                ]
+              ]
+            },
+            "Google Gemini Chat Model2": {
+              "ai_languageModel": [
+                [
+                  {
+                    "node": "Text Summarizer",
+                    "type": "ai_languageModel",
+                    "index": 0
+                  }
+                ]
+              ]
+            },
+            "Webhook": {
+              "main": [
+                [
+                  {
+                    "node": "Split Out",
+                    "type": "main",
+                    "index": 0
+                  }
+                ]
+              ]
+            },
+            "Split Out": {
+              "main": [
+                [
+                  {
+                    "node": "Redirect Message Types",
+                    "type": "main",
+                    "index": 0
+                  }
+                ]
+              ]
+            }
+          },
+          "settings": {
+            "executionOrder": "v1"
+          },
+          "staticData": null,
+          "meta": {
+            "templateId": "2466"
+          },
+          "pinData": {},
+          "versionId": "dc9767d2-8df2-429d-8817-c981ce305f7e",
+          "triggerCount": 0,
+          "shared": [
+            {
+              "updatedAt": "2025-11-01T06:06:50.649Z",
+              "createdAt": "2025-11-01T06:06:50.649Z",
+              "role": "workflow:owner",
+              "workflowId": "zDwWBoczcGK3m3JC",
+              "projectId": "O3TKzz1LtWsv0pol"
+            }
+          ],
+          "tags": [],
+          "repo": {
+            "owner": "sunrisewestern",
+            "name": "n8n-backup"
+          },
+          "origin": "n8n"
+        }
+      }
+    ]
+  },
+  "repo": {
+    "owner": "sunrisewestern",
+    "name": "n8n-backup"
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "updatedAt": "2025-11-03T04:44:18.516Z",
+      "createdAt": "2025-11-03T04:44:18.516Z",
+      "role": "workflow:owner",
+      "workflowId": "UC5rIDgNtGVR5DcU",
+      "projectId": "O3TKzz1LtWsv0pol"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-11-03T04:56:45.555Z",
+  "versionId": "8424ecdf-9803-43d1-acab-d4b99cd9f2a8"
+}
