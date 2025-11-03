@@ -1,0 +1,2288 @@
+{
+  "active": true,
+  "connections": {
+    "Window Buffer Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "Chat Memory Manager",
+            "type": "ai_memory",
+            "index": 0
+          },
+          {
+            "node": "Manager Agent1",
+            "type": "ai_memory",
+            "index": 0
+          },
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Manager Agent1",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter": {
+      "main": [
+        [
+          {
+            "node": "Redirect Message Types",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Date & Time",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Redirect Message Types": {
+      "main": [
+        [
+          {
+            "node": "Download Image",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Download audio",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [],
+        [
+          {
+            "node": "Get chat message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download Image": {
+      "main": [
+        [
+          {
+            "node": "Manager Agent1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get chat message": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Manager Agent1": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Execute a SQL query",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Select rows from a table",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ],
+        [
+          {
+            "node": "Chat Memory Manager",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Combine conditon",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Chat Memory Manager": {
+      "main": [
+        [
+          {
+            "node": "Combine conditon",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Combine conditon": {
+      "main": [
+        [
+          {
+            "node": "Session clear message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Session clear message": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Read/Write Files from Disk1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Chat Memory Manager",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download audio": {
+      "main": [
+        [
+          {
+            "node": "Transcribe a recording",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Transcribe a recording": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read/Write Files from Disk": {
+      "main": [
+        []
+      ]
+    },
+    "Convert to File": {
+      "main": [
+        [
+          {
+            "node": "Read/Write Files from Disk",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read/Write Files from Disk1": {
+      "main": [
+        [
+          {
+            "node": "Extract from File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time": {
+      "main": [
+        [
+          {
+            "node": "Convert to File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark a message as read in Gmail": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calculator": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Search": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "User Text Memory": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Select rows from a table": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Assistant Text Memory": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute a SQL query": {
+      "main": [
+        [
+          {
+            "node": "Execute a SQL query1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search Email from Gmail": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search Email from Outlook": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wikipedia": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Events from Google Calender": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Events on Google Calender": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Recurring Events on Google Calender": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delete Events on Google Calender": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Events on Google Calender": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Event from outlook": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Event on outlook": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Recurrent Event on outlook": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Event on outlook": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delete Event on outlook": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-11-01T18:39:45.845Z",
+  "id": "okPn3ru7DELkNUTe",
+  "isArchived": false,
+  "meta": {
+    "templateId": "8582",
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Personal Assistant Bot with Multi-Agent System using whatsapp & Google Gemini copy",
+  "nodes": [
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "=1236574355",
+        "contextWindowLength": 10
+      },
+      "id": "5a343f20-07a5-4255-8ebe-7daa6189cdc8",
+      "name": "Window Buffer Memory",
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "position": [
+        1888,
+        448
+      ],
+      "typeVersion": 1.3
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-flash-lite",
+        "options": {}
+      },
+      "id": "82eb289d-6bb3-4327-a08c-03242c22b55c",
+      "name": "Google Gemini Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "position": [
+        1760,
+        448
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "googlePalmApi": {
+          "id": "EWvbPPcQylZsC7gt",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "e8c8e9f9-02e5-484b-8487-68fa73717137",
+        "options": {
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -400,
+        1024
+      ],
+      "id": "372212f0-398f-437e-b5fe-6ffa28dcb2a4",
+      "name": "Webhook",
+      "webhookId": "0cdabf91-befe-40bd-bfb4-a9aa5b4cfa67",
+      "executeOnce": true
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "5671e03d-9ae0-4c50-80e3-10b52227a22d",
+                    "leftValue": "={{ $json.body.data.message.type }}",
+                    "rightValue": "image",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Image Message"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "a0e72f26-389f-4d68-a522-9012ae9172f1",
+                    "leftValue": "={{ $json.body.data.message.type }}",
+                    "rightValue": "ptt",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Audio Message"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "1fb894b4-5abb-45a6-b651-05f70aaadd43",
+                    "leftValue": "={{ $json.body.data.message.type }}",
+                    "rightValue": "video",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Video Message"
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra",
+          "renameFallbackOutput": "Text Message"
+        }
+      },
+      "id": "075d74db-1678-4936-8bc6-50b699697fbb",
+      "name": "Redirect Message Types",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        48,
+        608
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "e6251da8-e365-479d-9d03-9d834b701c6c",
+              "leftValue": "={{ $json.body.data.message.id.remote }}",
+              "rightValue": "=120363421902461838@g.us",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            },
+            {
+              "id": "3985dffc-5968-4ca7-8b6b-34005beb6c99",
+              "leftValue": "={{ $json.body.data.message.id.fromMe }}",
+              "rightValue": "false",
+              "operator": {
+                "type": "boolean",
+                "operation": "false",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "fdc58cb7-62c7-4ca6-a1da-73812c7ebfd4",
+              "leftValue": "={{ $json.body.dataType }}",
+              "rightValue": "message",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        -176,
+        1024
+      ],
+      "id": "eac445ce-ff4e-4ccb-b569-58d376d3018e",
+      "name": "Filter"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=http://whatsapp_web_api_app:3008/message/downloadMediaAsData/{{ $json.body.sessionId }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chatId",
+              "value": "={{ $json.body.data.message.id.remote }}"
+            },
+            {
+              "name": "messageId",
+              "value": "={{ $json.body.data.message.id.id }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        1520,
+        336
+      ],
+      "id": "51d579ba-2191-41d3-9a99-fbf10ae98ab9",
+      "name": "Download Image"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "e519e1f7-ba9b-4844-8537-4cf82aa1e156",
+              "name": "text",
+              "value": "={{ $json.body.data.message._data.body }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        720,
+        912
+      ],
+      "id": "e02900d7-9a72-41a2-b53f-5b14d9c85a17",
+      "name": "Get chat message",
+      "executeOnce": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=http://whatsapp_web_api_app:3008/client/sendMessage/{{ $('Webhook').item.json.body.sessionId }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "contentType",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chatId",
+              "value": "={{ $('Webhook').item.json.body.data.message.id.remote }}"
+            },
+            {
+              "name": "contentType",
+              "value": "string"
+            },
+            {
+              "name": "content",
+              "value": "={{ $json.output }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        2320,
+        624
+      ],
+      "id": "3a0c0a68-6dd1-47e9-a81a-0abef97a373e",
+      "name": "HTTP Request",
+      "executeOnce": true
+    },
+    {
+      "parameters": {
+        "mode": "delete",
+        "deleteMode": "all"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryManager",
+      "typeVersion": 1.1,
+      "position": [
+        1168,
+        1232
+      ],
+      "id": "3cf63725-459f-493c-9463-0b8e8162bc35",
+      "name": "Chat Memory Manager",
+      "alwaysOutputData": false,
+      "executeOnce": false,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "Describe the image with minimum words.",
+        "options": {
+          "systemMessage": "=You are a helpful personal assistant called Otto. \n\nUser may ask you to answer questions, describe pictures (or images description from a previous node ) or require your assistance. \n\nToday's date is {{ $today.format('yyyy-MM-dd') }}.\n\nGuidelines:\n- When summarizing emails, include Sender, Message date, subject, and brief summary of email.\n- if the user did not specify a date in the request assume they are asking for today\n- When answering questions about calendar events, filter out events that don't apply to the question.  For example, the question is about events for today, only reply with events for today. Don't mention future events if it's more than 1 week away\n- When creating calendar entry, the attendee email is optional",
+          "passthroughBinaryImages": true
+        }
+      },
+      "id": "9bc399b0-474d-4a23-ab02-520ca25ac2a8",
+      "name": "Manager Agent1",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "position": [
+        1744,
+        224
+      ],
+      "retryOnFail": false,
+      "typeVersion": 1.7,
+      "alwaysOutputData": false,
+      "executeOnce": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -400,
+        1488
+      ],
+      "id": "6e998308-a25e-450d-a8da-9b4024b57124",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "a8f11485-f62a-4dd5-83e7-6f6bf63f3eaf",
+              "leftValue": "={{ $json.text }}",
+              "rightValue": "new conversation",
+              "operator": {
+                "type": "string",
+                "operation": "notContains"
+              }
+            },
+            {
+              "id": "5c6c3a63-0e58-4b3b-9847-87869d7322e0",
+              "leftValue": "={{ $json.text }}",
+              "rightValue": "新对话",
+              "operator": {
+                "type": "string",
+                "operation": "notContains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {
+          "ignoreCase": true
+        }
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        944,
+        832
+      ],
+      "id": "1b02b56c-c929-4e90-87a1-de285f2f3b78",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "numberInputs": 3
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        2096,
+        608
+      ],
+      "id": "c67b1c5e-6623-4505-ad7a-740ecad4e4e3",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.text }}",
+        "options": {
+          "systemMessage": "=You are Otto, a casual, concise, and personable AI assistant designed to be a personal assistant through Whatsapp. Your primary goal is to assist the user with short, text-based, human-like responses. Talk like you’re texting a friend—keep it **very concise**, **human**, and **natural**. **No emojis** or overly formal language.  \n\n\n# ADDITIONAL INFORMATION\n- The current date and time is {{  $now.toString() }}\n- Time zone is EXT (Toronto)\n\n# **RULES**  \n\n3. **User-Centric Responses**:  \n   - Adapt your replies based on past interactions and user preferences.  \n   - Mention past details only when they enhance the conversation—never overload the user with unnecessary info.\n4. **Privacy and Sensitivity**:  \n   - Treat user data with care and respect.  \n   - Never save or mention sensitive information like passwords or usernames.  \n   - Only recall stored information if it’s helpful and relevant.\n5. **Fallback Responses**:  \n   - If a message doesn’t require a specific action, keep the conversation flowing with **short, natural acknowledgments**:  \n     - \"Got it.\"  \n     - \"Sure thing.\"  \n     - \"Alright.\"  \n\n## **ADDITIONAL INSTRUCTIONS**  \n\n- Use minimum words if possible.\n- No fluff, no filler—just clear and quick replies.  \n- **No emojis.**  \n\n---\n\n\n## **TOOLS**  \n\n### **User Text Memory**  \n- Store concise, relevant information about the user that enhances future interactions.  \n- Focus on preferences, names, schedules, and personal details.  \n- Keep entries brief and to the point.  \n\n**Examples:**  \n- \"User likes quick responses.\"  \n- \"User wants daily reminders.\"  \n\n---\n\n### **Otto Text Memory**  \n- Store feedback regarding how the user wants Zeus Tele to text or communicate.  \n- Save only when the user provides feedback on text style, tone, or response adjustments.  \n- Keep it brief and clear.  \n\n**Examples:**  \n- \"User wants even shorter replies.\"  \n- \"User prefers direct texts.\"  \n- \"User dislikes filler words.\"  \n\n## **MEMORIES**  \n\n### **Recent Noteworthy Memories**  \nHere are the most recent memories collected from the user, including their date and time of collection.   \n- **IMPORTANT:**   \n     - Memories under **\"Catogory\":User** are the user's past memories. \n     - Memories under **\"Catogory\":\"Assistant\"** are the text-based response preferences.  :  \n\n**{{ JSON.stringify($json.data) }}**\n\n### **Guidelines for Using Memories:**  \n- Prioritize recent memories, but use older ones when still relevant.  \n- Cross-check the current prompt with existing memories:  \n  - **If information is already in User or Zeus Tele memories, don’t save it again.**  \n  - Only save **new and noteworthy** info not in current memories.  \n- If user preferences change over time, use the latest ones.  \n\n---\n\n## ** Calculations**  \n\nUse the Calculator tool for any arithmetic or mathematical queries.\n\n## **  Web and Information Queries**  \n\nFor general information queries, use Google Search.\n\n\n## **EMAIL RETRIEVAL FUNCTIONALITY**\n\nAs an AI assistant, I can retrieve emails from a user's Gmail and/or Outlook accounts, based on the conditions provided by the user. If not specified, retrieve from both providers.\n\n**Functionality Description:**\n\n-  **Time Range Processing:**\n    *   When retrieving emails within a specified time range, I will automatically convert all time indicators (e.g., \"Monday,\" \"November 1st,\" \"two days ago,\" \"last week,\" \"this morning,\" \"past hour,\" etc.) into standard ISO 8601 time format strings.\n    *   For time ranges, I will parse and normalize them into explicit start and end times.\n    *   Examples of supported ISO 8601 formats for ranges:\n        *   Single point in time (UTC): `YYYY-MM-DDTHH:MM:SSZ` (e.g., `2023-10-27T10:00:00Z`)\n        *   Start of a day (UTC): `YYYY-MM-DDTHH:MM:SSZ` (e.g., `2023-10-27T00:00:00Z`)\n        *   End of a day (UTC): `YYYY-MM-DDTHH:MM:SSZ` (e.g., `2023-10-27T23:59:59Z`)\n        *   Start of a specific hour (with timezone offset): `YYYY-MM-DDTHH:MM:SS+/-HH:MM` (e.g., `2023-10-27T09:00:00-05:00`)\n\n-  **Filter Handling (for both Gmail and Outlook):**\n    *   I will support the following common filter conditions and deduce their applicability across both services, even if API property names differ:\n        *   **Sender:** Filter emails sent by a specific sender.\n        *   **Recipient:** Filter emails sent to a specific recipient (To, Cc, or Bcc).\n        *   **Subject:** Filter emails where the subject contains specific keywords.\n        *   **Keywords (in Body):** Filter emails where the body contains specific keywords.\n        *   **Read Status:** Filter for read or unread emails.\n            *   In Gmail, often simulated through search operators like `is:unread`.\n            *   In Outlook, filtered via the `isRead` property (`isRead eq true` or `isRead eq false`).\n        *   **Attachments:** Filter for emails with or without attachments.\n        *   **Date Range:** Filter emails between specified start and end dates based on the standardized ISO 8601 time strings mentioned above.\n\n- **If \"both\" services are specified:**\n    *   **First, retrieve emails from Gmail:** I will execute the retrieval using Gmail's API, mapping the parsed filter conditions to Gmail's specific query syntax.\n    *   **Then, retrieve emails from Outlook:** I will subsequently execute the retrieval using Outlook's API, carefully mapping theparsed filter conditions to **Outlook's own specific API filter syntax** (e.g., translating \"unread\" to `isRead eq false`) and leveraging any service-specific capabilities or parameters.\n\n-  Do not response with exact sender's email address. Just tell the sender's dentified organization, company, service, or personal name from the available email headers or content.\n\n## **CALENDAR FUNCTIONALITY - Google Calendar & Outlook Calendar**\n\nYou are a helpful assistant that manages both Google Calendar and Outlook Calendar accounts.\n\n### **TASK**\n\nYou can be given five different types of tasks related to calendar events:\n\n1.  **Retrieve calendar events** (from specified service(s) within a time range) — Trigger the \"Get Events\" tool.\n2.  **Create a single (non-recurring) event** (on a specified service) — Trigger the \"Create Events\" tool.\n3.  **Create a recurring event** (on a specified service) — Trigger the \"Create Recurring Events\" tool.\n4.  **Delete an event** (from a specified service) — Trigger the \"Delete Events\" tool.\n5.  **Update an event** (on a specified service) — Trigger the \"Update Events\" tool.\n\n---\n\n### **INSTRUCTIONS**\n\n#### **General Guidelines:**\n- **Default Duration:** If no duration is mentioned, assume the event lasts **one hour**.\n- **Time Interpretation:**\n  - If a time range is written as \"start time - end time\" (with a dash), always interpret the dash as **\"to\"**.\n  - Example: \"2 - 4 p.m.\" should be read as \"2 p.m. to 4 p.m.\".\n- **Text Clarification:** If a user says \"make an event,\" it should always be interpreted as \"Create a Calendar Event.\"\n- **Event Output Information:** When displaying any information about event participants (e.g., organizer, attendees), **do not reveal the exact email address**. Instead, I will endeavor to **extract and present the identified organization, company, service, or personal name** from the available event data fields.\n\n#### **Service Handling:**\n- **Service Selection:**\n    *   If the user **explicitly specifies** the calendar service (\"Google Calendar\" or \"Outlook Calendar\"), I will operate exclusively on the designated service.\n    *   If the user **does not specify** a service for **retrieval tasks** (e.g., \"Get my events\"), I will default to attempting to retrieve from **both services (Google Calendar and Outlook Calendar)**.\n    *   If the user **does not specify** a service for **creation, deletion, or update tasks** (e.g., \"create an event\"), I will assume the intention is for **Google Calendar** as the primary service unless the context or event details clearly imply Outlook Calendar.\n\n#### **Time Range Interpretation & Conversion:**\n- When required to retrieve/create/update/delete events within a specified time range, I will automatically convert all time indicators (e.g., \"Monday,\" \"November 1st,\" \"two days ago,\" \"next week,\" \"this evening,\" \"tomorrow,\" \"past hour\") into standard ISO 8601 time format strings.\n- For implied or explicit time ranges, I will parse and normalize them into explicit start and end times.\n- Supported ISO 8601 formats for ranges:\n    *   Single point in time (UTC): `YYYY-MM-DDTHH:MM:SSZ` (e.g., `2023-10-27T10:00:00Z`)\n    *   Start of a day (UTC): `YYYY-MM-DDTHH:MM:SSZ` (e.g., `2023-10-27T00:00:00Z`)\n    *   End of a day (UTC): `YYYY-MM-DDTHH:MM:SSZ` (e.g., `2023-10-27T23:59:59Z`)\n    *   Start of a specific hour (with timezone offset): `YYYY-MM-DDTHH:MM:SS+/-HH:MM` (e.g., `2023-10-27T09:00:00-05:00`)\n\n#### **Tool Instructions:**\n\n**1. Get Events**\n- Query using standard ISO 8601 time format strings.\n- **Purpose:** Retrieve events from the specified service(s) within the given time range.\n- **Priority (If \"both\" services selected for retrieval):**\n    *   **First, retrieve events from Google Calendar:** Use Google Calendar's API, mapping general filter conditions (e.g., text search via `q` parameter; date range via `timeMin `/`timeMax`).\n    *   **Then, retrieve events from Outlook Calendar:** Subsequently use Outlook Calendar's API, carefully mapping filter conditions to **Outlook's own specific API filter syntax** (e.g., OData queries for subject, location, attendees; `start`/`end` for date range selection), leveraging any service-specific capabilities or parameters.\n- **Prerequisite:** **Always call this tool before executing a \"Create Events\" (single, non-recurring), \"Delete Events,\" or \"Update Events\" task** to check for any existing events on the relevant calendar service(s) within the specified timeframe.\n\n**2. Create Events (Single, Non-Recurring)**\n- **Purpose:** Create a single, non-recurring event on the designated calendar service.\n- **Pre-check:**\n  - **Always call `Get Events` first** for the specified time period **on the intended target calendar service(s)** to detect potential conflicts.\n  - If events are found during that period **on the target service(s)**:\n    - **Still proceed to create the new event.**\n    - **Notify the user about any conflicting events** found in the **target service(s)**, including their titles, precise times, and any listed attendees.\n- **Execution:** Proceed with event creation on the target service (Google Calendar or Outlook Calendar) using its specific API.\n\n**3. Create Recurring Events**\n- **Purpose:** Create a recurring event on the designated calendar service.\n- **Pre-check:**\n  - **Do Not Call `Get Events`** before creating a recurring event (e.g., events that repeat weekly for several weeks) on the target service.\n- **Execution:** Proceed directly to event creation on the target service without performing conflict checking, using its specific API.\n\n**4. Delete Events**\n- **Purpose:** Delete a specific event from its originating calendar service.\n- **Pre-requisite:**\n  - **Always call `Get Events` first** to retrieve events within the desired timeframe across the specified service(s) (or both if unspecified) to obtain potential event IDs.\n- **Execution:** Use the **event ID from the retrieved events and execute the deletion via the corresponding service's API** (Google Calendar or Outlook Calendar).\n- **Confirmation:** Confirm to the user which event was deleted, including its title, time, and **explicitly state from which calendar service it was deleted.**\n\n**5. Update Events**\n- **Purpose:** Modify an existing event on its originating calendar service.\n- **Pre-requisite:**\n  - **Always call `Get Events` first** to retrieve the target event and obtain its **event ID from its originating calendar service.**\n- **Execution:** When updating:\n    - Pass along the event ID to the **correct service's API (Google Calendar or Outlook Calendar).**\n    - Carry over all existing event fields into the update request unless specifically instructed otherwise by the user.\n    - Only modify fields explicitly specified by the user.\n    - Reassign event color based on the predefined scheme unless a specific color is explicitly requested by the user.\n- **Confirmation:** Confirm to the user which event was updated, including its title, time, and **explicitly state on which calendar service it was updated.**\n\n#### **Notes:**  \n- Always provide a confirmation message after creating, deleting, or updating an event.  \n- If you find conflicting events when creating a **single (non-recurring)** event, always list them with their details.  \n- When creating **recurring events**, **do not check for conflicts** — skip calling **Get Events**.  \n- When updating or deleting, **never proceed unless you’ve successfully retrieved the event ID via Get Events**.  \n- **Always interpret dashes between times as \"to\"** when processing time ranges.  \n\n\n",
+          "maxIterations": 10,
+          "returnIntermediateSteps": true,
+          "enableStreaming": false
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3,
+      "position": [
+        1744,
+        624
+      ],
+      "id": "243bc461-bdc7-4eaa-93c9-e11f8eef389a",
+      "name": "AI Agent",
+      "retryOnFail": true,
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        1520,
+        1024
+      ],
+      "id": "ab48098f-ca9b-451f-b803-9f96e75ad6f0",
+      "name": "Combine conditon"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "fcd43ff9-027b-402e-b742-f7fd04beb062",
+              "name": "output",
+              "value": "Session Cleared.",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1808,
+        1024
+      ],
+      "id": "5a9c93b0-cc02-467c-8511-40c6251ed0c9",
+      "name": "Session clear message"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        304,
+        1248
+      ],
+      "id": "f192e88c-3400-4966-acfe-3b1a394176a7",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "06307e52-26c1-42cb-9e40-1d5f697ad025",
+              "leftValue": "={{ new Date($json.data[0].currentDate) }}",
+              "rightValue": "={{ new Date($now - (20 * 60 * 1000)) }}",
+              "operator": {
+                "type": "dateTime",
+                "operation": "before"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        944,
+        1248
+      ],
+      "id": "052a3e12-8021-4eeb-9104-1b8ab1109209",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=http://whatsapp_web_api_app:3008/message/downloadMediaAsData/{{ $json.body.sessionId }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chatId",
+              "value": "={{ $json.body.data.message.id.remote }}"
+            },
+            {
+              "name": "messageId",
+              "value": "={{ $json.body.data.message.id.id }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        272,
+        608
+      ],
+      "id": "5f804e72-0c26-4d84-aa6d-31cac02f98bb",
+      "name": "Download audio"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "63f20a52-985a-4389-ad8f-b66cb4ef7615",
+              "name": "text",
+              "value": "={{ $json.content.parts[0].text }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        720,
+        608
+      ],
+      "id": "37a46a5c-182e-415a-b7a8-50a280a56a78",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "resource": "audio",
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-flash-lite-latest",
+          "mode": "list",
+          "cachedResultName": "models/gemini-flash-lite-latest"
+        },
+        "inputType": "binary",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1,
+      "position": [
+        496,
+        608
+      ],
+      "id": "9a82811d-e279-40a8-87b9-e7c83639dccd",
+      "name": "Transcribe a recording",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "EWvbPPcQylZsC7gt",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "/home/node/lastcall.json",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        496,
+        1056
+      ],
+      "id": "33ed56a1-0a7e-49be-bdd8-6abff14dcab7",
+      "name": "Read/Write Files from Disk"
+    },
+    {
+      "parameters": {
+        "operation": "toJson",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        272,
+        1056
+      ],
+      "id": "2fab1a61-3698-4e77-b92c-15019e918c17",
+      "name": "Convert to File"
+    },
+    {
+      "parameters": {
+        "fileSelector": "/home/node/lastcall.json",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        496,
+        1248
+      ],
+      "id": "3c5625b1-218c-4287-879d-98ec8894d4b3",
+      "name": "Read/Write Files from Disk1"
+    },
+    {
+      "parameters": {
+        "operation": "fromJson",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        720,
+        1248
+      ],
+      "id": "0f876b4b-859e-4961-a4f6-4e356f83eebf",
+      "name": "Extract from File"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        48,
+        1056
+      ],
+      "id": "0e314b02-d306-4089-b487-e67d6283549a",
+      "name": "Date & Time"
+    },
+    {
+      "parameters": {
+        "operation": "markAsRead",
+        "messageId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Message_ID', ``, 'string') }}"
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        2240,
+        896
+      ],
+      "id": "0193e24f-2699-4e1d-a9bb-32a2bd850dd6",
+      "name": "Mark a message as read in Gmail",
+      "webhookId": "01336f79-34f0-4c98-953d-7402940b662a",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "987dc7bmOJBpTehi",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "247235b8-2ada-450e-ad82-0b60a843b406",
+      "name": "Calculator",
+      "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+      "position": [
+        2544,
+        896
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "searchQuery": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Search_Query', ``, 'string') }}",
+        "returnAll": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Return_All', ``, 'boolean') }}",
+        "additionalFields": {
+          "exactTerms": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Exact_Terms', ``, 'string') }}",
+          "excludeTerms": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Exclude_Terms', ``, 'string') }}",
+          "fileType": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('File_Type', ``, 'string') }}",
+          "linkSite": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Link_Site', ``, 'string') }}",
+          "safe": "off",
+          "c2off": "0",
+          "siteSearch": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Site_Search', ``, 'string') }}"
+        },
+        "requestOptions": {}
+      },
+      "type": "@bitovi/n8n-nodes-google-search.googleSearchTool",
+      "typeVersion": 1,
+      "position": [
+        2400,
+        896
+      ],
+      "id": "15d95dad-19b5-4cae-8316-a6d6c2bbdf3e",
+      "name": "Google Search",
+      "credentials": {
+        "googleSearchCredentialsApi": {
+          "id": "ehhjAEZttUoUcS86",
+          "name": "Google Search Credentials account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "CREATE SCHEMA IF NOT EXISTS text_memory;\n\nDROP TABLE IF EXISTS text_memory.user_interactions;\n\nCREATE TABLE IF NOT EXISTS text_memory.user_interactions (\n    id SERIAL PRIMARY KEY,\n    username VARCHAR(255) NOT NULL,\n    category VARCHAR(255) NOT NULL CHECK (category IN ('User', 'Assistant')),\n    memory TEXT,\n    interaction_time TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP\n);",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        -176,
+        1488
+      ],
+      "id": "8b05f5db-16c3-4467-9c8a-aae6e877c3be",
+      "name": "Execute a SQL query",
+      "credentials": {
+        "postgres": {
+          "id": "O5uhDud8cGbIaDfc",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "schema": {
+          "__rl": true,
+          "value": "text_memory",
+          "mode": "list",
+          "cachedResultName": "text_memory"
+        },
+        "table": {
+          "__rl": true,
+          "value": "user_interactions",
+          "mode": "list",
+          "cachedResultName": "user_interactions"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "username": "={{ $('Webhook').item.json.body.data.message._data.notifyName }}",
+            "interaction_time": "={{ $now }}",
+            "category": "User",
+            "memory": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('memory', ``, 'string') }}"
+          },
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "username",
+              "displayName": "username",
+              "required": true,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "category",
+              "displayName": "category",
+              "required": true,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "memory",
+              "displayName": "memory",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "interaction_time",
+              "displayName": "interaction_time",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "dateTime",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgresTool",
+      "typeVersion": 2.6,
+      "position": [
+        2704,
+        912
+      ],
+      "id": "1d15f1b3-258f-4f14-9de3-f605ed72e5e2",
+      "name": "User Text Memory",
+      "credentials": {
+        "postgres": {
+          "id": "O5uhDud8cGbIaDfc",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "schema": {
+          "__rl": true,
+          "value": "text_memory",
+          "mode": "list",
+          "cachedResultName": "text_memory"
+        },
+        "table": {
+          "__rl": true,
+          "value": "user_interactions",
+          "mode": "list",
+          "cachedResultName": "user_interactions"
+        },
+        "limit": 100,
+        "where": {
+          "values": [
+            {
+              "column": "username",
+              "value": "={{ $('Webhook').item.json.body.data.message._data.notifyName }}"
+            }
+          ]
+        },
+        "sort": {
+          "values": [
+            {
+              "column": "interaction_time",
+              "direction": "DESC"
+            }
+          ]
+        },
+        "options": {
+          "outputColumns": [
+            "category",
+            "memory"
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        1136,
+        592
+      ],
+      "id": "c94947e3-2d90-4e77-a0ff-1b0a2aa8b2d8",
+      "name": "Select rows from a table",
+      "executeOnce": true,
+      "alwaysOutputData": true,
+      "retryOnFail": false,
+      "credentials": {
+        "postgres": {
+          "id": "O5uhDud8cGbIaDfc",
+          "name": "Postgres account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "options": {}
+      },
+      "id": "4d83be67-a21e-4d48-b655-eb44ead3409e",
+      "name": "Aggregate",
+      "type": "n8n-nodes-base.aggregate",
+      "position": [
+        1312,
+        592
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineAll",
+        "options": {}
+      },
+      "id": "d5bdaaf6-25c5-483b-a674-fa7686285f37",
+      "name": "Merge1",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        1472,
+        752
+      ],
+      "executeOnce": true,
+      "typeVersion": 3
+    },
+    {
+      "parameters": {
+        "schema": {
+          "__rl": true,
+          "value": "text_memory",
+          "mode": "list",
+          "cachedResultName": "text_memory"
+        },
+        "table": {
+          "__rl": true,
+          "value": "user_interactions",
+          "mode": "list",
+          "cachedResultName": "user_interactions"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "username": "={{ $('Webhook').item.json.body.data.message._data.notifyName }}",
+            "interaction_time": "={{ $now }}",
+            "category": "Assistant",
+            "memory": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('memory', ``, 'string') }}"
+          },
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "username",
+              "displayName": "username",
+              "required": true,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "category",
+              "displayName": "category",
+              "required": true,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "memory",
+              "displayName": "memory",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "interaction_time",
+              "displayName": "interaction_time",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "dateTime",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgresTool",
+      "typeVersion": 2.6,
+      "position": [
+        2704,
+        1056
+      ],
+      "id": "bcc60b59-7998-4e49-9dc8-909d66a4b8e4",
+      "name": "Assistant Text Memory",
+      "credentials": {
+        "postgres": {
+          "id": "O5uhDud8cGbIaDfc",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO text_memory.user_interactions (username, category, memory) VALUES\n('Chauncey', 'User', 'I enjoy reading science fiction novels, especially those with dystopian themes.'),\n('Chauncey', 'User', 'I am allergic to peanuts and avoid any food containing them.'),\n('Chauncey', 'User', 'My favorite color is blue, and I prefer dark shades.'),\n('Chauncey', 'Assistant', 'When responding, prioritize conciseness and clarity.'),\n('Chauncey', 'Assistant', 'Always maintain a polite and helpful tone.'),\n('Chauncey', 'Assistant', 'If asked about current events, provide a brief summary and offer to elaborate.'),\n('Chauncey', 'User', 'I like to listen to classical music while working.'),\n('Chauncey', 'User', 'I am learning to play the guitar.'),\n('Chauncey', 'Assistant', 'Offer follow-up questions to encourage further interaction.'),\n('Chauncey', 'Assistant', 'Avoid making assumptions about user preferences.'),\n('Chauncey', 'User', 'I have a strong interest in ancient history.'),\n('Chauncey', 'Assistant', 'If a query is ambiguous, ask for clarification.');",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        32,
+        1488
+      ],
+      "id": "0dca0a34-784f-4953-8bc5-7191940e5a1b",
+      "name": "Execute a SQL query1",
+      "credentials": {
+        "postgres": {
+          "id": "O5uhDud8cGbIaDfc",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "returnAll": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Return_All', ``, 'boolean') }}",
+        "simple": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Simplify', ``, 'boolean') }}",
+        "filters": {
+          "q": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Search', ``, 'string') }}",
+          "receivedAfter": "={{ $fromAI('Received_After', ``, 'string') }}",
+          "receivedBefore": "={{ $fromAI('Received_Before', ``, 'string') }}",
+          "sender": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Sender', ``, 'string') }}"
+        },
+        "options": {}
+      },
+      "id": "7c1a815d-6732-4da9-bea1-4a59ded57c10",
+      "name": "Search Email from Gmail",
+      "type": "n8n-nodes-base.gmailTool",
+      "position": [
+        2240,
+        1072
+      ],
+      "webhookId": "a4ae7b5d-7686-4bee-a753-848932860b4e",
+      "typeVersion": 2.1,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "987dc7bmOJBpTehi",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "returnAll": true,
+        "filtersUI": {
+          "values": {
+            "filters": {
+              "custom": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Filter_Query', ``, 'string') }}",
+              "readStatus": "both",
+              "receivedAfter": "={{ $fromAI('Received_After', ``, 'string') }}",
+              "receivedBefore": "={{ $fromAI('Received_Before', ``, 'string') }}",
+              "sender": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Sender', ``, 'string') }}"
+            }
+          }
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.microsoftOutlookTool",
+      "typeVersion": 2,
+      "position": [
+        2240,
+        1248
+      ],
+      "id": "6df1319e-f027-4317-9224-315cadf57b10",
+      "name": "Search Email from Outlook",
+      "webhookId": "f788c8fa-f410-4cdf-81b3-0a622e4b24ac",
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "JxRHeAQD9aGdaBuS",
+          "name": "Microsoft Outlook account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.toolWikipedia",
+      "typeVersion": 1,
+      "position": [
+        2400,
+        1040
+      ],
+      "id": "a19bddb7-5e14-4d87-92a4-29c052568c8b",
+      "name": "Wikipedia"
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "calendar": {
+          "__rl": true,
+          "value": "chenxiaoxime@gmail.com",
+          "mode": "list",
+          "cachedResultName": "chenxiaoxime@gmail.com"
+        },
+        "timeMin": "={{ $fromAI(\"After\") }}",
+        "timeMax": "={{ $fromAI(\"Before\") }}",
+        "options": {
+          "maxAttendees": "={{ $fromAI('Max_Attendees', ``, 'number') }}",
+          "query": "={{ $fromAI('keyword', ``, 'string') }}"
+        }
+      },
+      "id": "895d4354-dfe1-43ba-90ed-506f81390981",
+      "name": "Get Events from Google Calender",
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "position": [
+        2048,
+        1264
+      ],
+      "typeVersion": 1.3,
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "OWXFuBzXYDUzz67N",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "calendar": {
+          "__rl": true,
+          "value": "chenxiaoxime@gmail.com",
+          "mode": "list",
+          "cachedResultName": "chenxiaoxime@gmail.com"
+        },
+        "start": "={{ $fromAI(\"Start\") }}",
+        "end": "={{ $fromAI(\"End\") }}",
+        "additionalFields": {
+          "description": "={{ $fromAI(\"Description\") }}",
+          "location": "={{ $fromAI(\"Location\") }}",
+          "summary": "={{ $fromAI(\"Title\") }}"
+        }
+      },
+      "id": "b37a2b81-bd86-4420-9cdb-bad05d169d60",
+      "name": "Create Events on Google Calender",
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "position": [
+        2048,
+        1456
+      ],
+      "typeVersion": 1.3,
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "OWXFuBzXYDUzz67N",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "calendar": {
+          "mode": "id",
+          "value": "={{ $json.settings.GCAL_ID || 'primary' }}",
+          "__regex": "(^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*)"
+        },
+        "start": "={{ $fromAI(\"Start\") }}",
+        "end": "={{ $fromAI(\"End\") }}",
+        "additionalFields": {
+          "description": "={{ $fromAI('Description', ``, 'string') }}",
+          "location": "={{ $fromAI(\"Location\") }}",
+          "repeatUntil": "={{ $fromAI(\"RepeatUntil\") }}",
+          "summary": "={{ $fromAI(\"Title\") }}"
+        }
+      },
+      "id": "e12fb119-00be-4c16-9488-3d95d0963bf9",
+      "name": "Create Recurring Events on Google Calender",
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "position": [
+        2064,
+        1632
+      ],
+      "typeVersion": 1.3,
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "OWXFuBzXYDUzz67N",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "calendar": {
+          "mode": "id",
+          "value": "={{ $json.settings.GCAL_ID || 'primary' }}"
+        },
+        "eventId": "={{ $fromAI(\"EventID\") }}",
+        "options": {}
+      },
+      "id": "88a149a3-f286-4d24-bb2a-fadfbe2f1198",
+      "name": "Delete Events on Google Calender",
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "position": [
+        2064,
+        1824
+      ],
+      "typeVersion": 1.3,
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "OWXFuBzXYDUzz67N",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "calendar": {
+          "mode": "id",
+          "value": "={{ $json.settings.GCAL_ID || 'primary' }}"
+        },
+        "eventId": "={{ $fromAI(\"EventID\") }}",
+        "updateFields": {
+          "color": "={{ $fromAI(\"Color\") }}",
+          "description": "={{ $fromAI(\"Description\") }}",
+          "end": "={{ $fromAI(\"End\") }}",
+          "location": "={{ $fromAI(\"Location\") }}",
+          "repeatUntil": "={{ $fromAI(\"RepeatUntil\") }}",
+          "start": "={{ $fromAI(\"Start\") }}",
+          "summary": "={{ $fromAI(\"Title\") }}"
+        }
+      },
+      "id": "51554696-dcee-426e-8027-5915aecb9b1c",
+      "name": "Update Events on Google Calender",
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "position": [
+        2064,
+        2016
+      ],
+      "typeVersion": 1.3,
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "OWXFuBzXYDUzz67N",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "event",
+        "operation": "create",
+        "calendarId": {
+          "__rl": true,
+          "value": "AQMkADAwATZiZmYAZC1kYWZmAC1jZjQwLTAwAi0wMAoARgAAAykMO3mDh5ZJstz1tDQeJk8HAIHfiC8mduZJubPz1Gv3o1EAAAIBBgAAAIHfiC8mduZJubPz1Gv3o1EAAAI8AwAAAA==",
+          "mode": "list",
+          "cachedResultName": "Calendar"
+        },
+        "subject": "={{ $fromAI('Title', ``, 'string') }}",
+        "startDateTime": "={{ $fromAI('Start', ``, 'string') }}",
+        "endDateTime": "={{ $fromAI('End', ``, 'string') }}",
+        "additionalFields": {
+          "body": "={{ $fromAI('Description', ``, 'string') }}",
+          "type": "singleInstance"
+        }
+      },
+      "type": "n8n-nodes-base.microsoftOutlookTool",
+      "typeVersion": 2,
+      "position": [
+        1824,
+        1472
+      ],
+      "id": "ce0276e4-d1dc-46e8-a43c-13c8a14cfea6",
+      "name": "Create Event on outlook",
+      "webhookId": "55cfe41e-f7eb-4936-885e-32b3394dc38f",
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "JxRHeAQD9aGdaBuS",
+          "name": "Microsoft Outlook account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "event",
+        "operation": "update",
+        "calendarId": {
+          "__rl": true,
+          "value": "AQMkADAwATZiZmYAZC1kYWZmAC1jZjQwLTAwAi0wMAoARgAAAykMO3mDh5ZJstz1tDQeJk8HAIHfiC8mduZJubPz1Gv3o1EAAAIBBgAAAIHfiC8mduZJubPz1Gv3o1EAAAI8AwAAAA==",
+          "mode": "list",
+          "cachedResultName": "Calendar"
+        },
+        "eventId": {
+          "__rl": true,
+          "value": "={{ $fromAI('EventID', ``, 'string') }}",
+          "mode": "id"
+        },
+        "additionalFields": {
+          "body": "={{ $fromAI('Description', ``, 'string') }}",
+          "end": "={{ $fromAI('End', ``, 'string') }}",
+          "start": "={{ $fromAI('Start', ``, 'string') }}",
+          "subject": "={{ $fromAI('Title', ``, 'string') }}"
+        }
+      },
+      "type": "n8n-nodes-base.microsoftOutlookTool",
+      "typeVersion": 2,
+      "position": [
+        1824,
+        2048
+      ],
+      "id": "431b9b33-fb4f-4efb-badd-923c33ad189f",
+      "name": "Update Event on outlook",
+      "webhookId": "55cfe41e-f7eb-4936-885e-32b3394dc38f",
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "JxRHeAQD9aGdaBuS",
+          "name": "Microsoft Outlook account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "event",
+        "limit": 50,
+        "filters": {
+          "custom": "=start/dateTime ge '{{ $fromAI(\"After\") }}' and end/dateTime le '{{ $fromAI(\"Before\") }}' {{ \n(() => {  \n    const keyword = ($fromAI(\"keyword\", '', 'string') || '').trim();  \n    if (keyword !== '') {  \n      return ` and contains(subject, '${keyword}')`;  \n    }  \n    return '';\n  })() }}"
+        }
+      },
+      "type": "n8n-nodes-base.microsoftOutlookTool",
+      "typeVersion": 2,
+      "position": [
+        1824,
+        1264
+      ],
+      "id": "b7185c2e-594a-4d70-9d7c-57da70a832b4",
+      "name": "Get Event from outlook",
+      "webhookId": "55cfe41e-f7eb-4936-885e-32b3394dc38f",
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "JxRHeAQD9aGdaBuS",
+          "name": "Microsoft Outlook account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "event",
+        "operation": "create",
+        "calendarId": {
+          "__rl": true,
+          "value": "AQMkADAwATZiZmYAZC1kYWZmAC1jZjQwLTAwAi0wMAoARgAAAykMO3mDh5ZJstz1tDQeJk8HAIHfiC8mduZJubPz1Gv3o1EAAAIBBgAAAIHfiC8mduZJubPz1Gv3o1EAAAI8AwAAAA==",
+          "mode": "list",
+          "cachedResultName": "Calendar"
+        },
+        "subject": "={{ $fromAI('Title', ``, 'string') }}",
+        "startDateTime": "={{ $fromAI('Start', ``, 'string') }}",
+        "endDateTime": "={{ $fromAI('End', ``, 'string') }}",
+        "additionalFields": {
+          "body": "={{ $fromAI('Description', ``, 'string') }}",
+          "type": "seriesMaster"
+        }
+      },
+      "type": "n8n-nodes-base.microsoftOutlookTool",
+      "typeVersion": 2,
+      "position": [
+        1824,
+        1664
+      ],
+      "id": "d2e47280-e0b8-477d-9c13-20cfd86bdefb",
+      "name": "Create Recurrent Event on outlook",
+      "webhookId": "55cfe41e-f7eb-4936-885e-32b3394dc38f",
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "JxRHeAQD9aGdaBuS",
+          "name": "Microsoft Outlook account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "event",
+        "operation": "delete",
+        "calendarId": {
+          "__rl": true,
+          "value": "AQMkADAwATZiZmYAZC1kYWZmAC1jZjQwLTAwAi0wMAoARgAAAykMO3mDh5ZJstz1tDQeJk8HAIHfiC8mduZJubPz1Gv3o1EAAAIBBgAAAIHfiC8mduZJubPz1Gv3o1EAAAI8AwAAAA==",
+          "mode": "list",
+          "cachedResultName": "Calendar"
+        },
+        "eventId": {
+          "__rl": true,
+          "value": "={{ $fromAI('EventID', ``, 'string') }}",
+          "mode": "id"
+        }
+      },
+      "type": "n8n-nodes-base.microsoftOutlookTool",
+      "typeVersion": 2,
+      "position": [
+        1824,
+        1856
+      ],
+      "id": "a9e8c5f2-89f3-486c-b8ee-a442fde4708a",
+      "name": "Delete Event on outlook",
+      "webhookId": "55cfe41e-f7eb-4936-885e-32b3394dc38f",
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "JxRHeAQD9aGdaBuS",
+          "name": "Microsoft Outlook account"
+        }
+      }
+    }
+  ],
+  "origin": "n8n",
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "localhost:5678",
+            "content-length": "3320",
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "user-agent": "axios/1.11.0",
+            "accept-encoding": "gzip, compress, deflate, br"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "dataType": "message",
+            "data": {
+              "message": {
+                "_data": {
+                  "id": {
+                    "fromMe": false,
+                    "remote": "120363421902461838@g.us",
+                    "id": "AC063392A3BED45645F762C3B28FB03A",
+                    "participant": "230395148812338@lid",
+                    "_serialized": "false_120363421902461838@g.us_AC063392A3BED45645F762C3B28FB03A_230395148812338@lid"
+                  },
+                  "viewed": false,
+                  "body": "I don't like apples",
+                  "type": "chat",
+                  "t": 1762070622,
+                  "clientReceivedTsMillis": 1762070622676,
+                  "notifyName": "Chauncey",
+                  "from": "120363421902461838@g.us",
+                  "to": "8619037134897@c.us",
+                  "author": "230395148812338@lid",
+                  "ack": 1,
+                  "invis": false,
+                  "isNewMsg": true,
+                  "star": false,
+                  "kicNotified": false,
+                  "recvFresh": true,
+                  "isFromTemplate": false,
+                  "isAdsMedia": false,
+                  "pollInvalidated": false,
+                  "isSentCagPollCreation": false,
+                  "latestEditMsgKey": null,
+                  "latestEditSenderTimestampMs": null,
+                  "mentionedJidList": [],
+                  "groupMentions": [],
+                  "isEventCanceled": false,
+                  "eventInvalidated": false,
+                  "isVcardOverMmsDocument": false,
+                  "isForwarded": false,
+                  "isQuestion": false,
+                  "questionReplyQuotedMessage": null,
+                  "questionResponsesCount": 0,
+                  "readQuestionResponsesCount": 0,
+                  "hasReaction": false,
+                  "viewMode": "VISIBLE",
+                  "messageSecret": {
+                    "0": 61,
+                    "1": 84,
+                    "2": 126,
+                    "3": 105,
+                    "4": 156,
+                    "5": 226,
+                    "6": 134,
+                    "7": 109,
+                    "8": 221,
+                    "9": 150,
+                    "10": 253,
+                    "11": 152,
+                    "12": 157,
+                    "13": 84,
+                    "14": 247,
+                    "15": 106,
+                    "16": 227,
+                    "17": 197,
+                    "18": 154,
+                    "19": 153,
+                    "20": 251,
+                    "21": 66,
+                    "22": 123,
+                    "23": 173,
+                    "24": 119,
+                    "25": 84,
+                    "26": 113,
+                    "27": 235,
+                    "28": 184,
+                    "29": 197,
+                    "30": 56,
+                    "31": 31
+                  },
+                  "productHeaderImageRejected": false,
+                  "lastPlaybackProgress": 0,
+                  "isDynamicReplyButtonsMsg": false,
+                  "isCarouselCard": false,
+                  "parentMsgId": null,
+                  "callSilenceReason": null,
+                  "isVideoCall": false,
+                  "callDuration": null,
+                  "callCreator": null,
+                  "callParticipants": null,
+                  "isCallLink": null,
+                  "callLinkToken": null,
+                  "isMdHistoryMsg": false,
+                  "stickerSentTs": 0,
+                  "isAvatar": false,
+                  "lastUpdateFromServerTs": 0,
+                  "invokedBotWid": null,
+                  "bizBotType": null,
+                  "botResponseTargetId": null,
+                  "botPluginType": null,
+                  "botPluginReferenceIndex": null,
+                  "botPluginSearchProvider": null,
+                  "botPluginSearchUrl": null,
+                  "botPluginSearchQuery": null,
+                  "botPluginMaybeParent": false,
+                  "botReelPluginThumbnailCdnUrl": null,
+                  "botMessageDisclaimerText": null,
+                  "botMsgBodyType": null,
+                  "reportingTokenInfo": {
+                    "reportingToken": {
+                      "0": 79,
+                      "1": 151,
+                      "2": 202,
+                      "3": 6,
+                      "4": 28,
+                      "5": 41,
+                      "6": 8,
+                      "7": 215,
+                      "8": 55,
+                      "9": 192,
+                      "10": 167,
+                      "11": 200,
+                      "12": 250,
+                      "13": 107,
+                      "14": 149,
+                      "15": 142
+                    },
+                    "version": 2,
+                    "reportingTag": {
+                      "0": 1,
+                      "1": 12,
+                      "2": 86,
+                      "3": 127,
+                      "4": 207,
+                      "5": 162,
+                      "6": 10,
+                      "7": 74,
+                      "8": 171,
+                      "9": 47,
+                      "10": 98,
+                      "11": 255,
+                      "12": 142,
+                      "13": 252,
+                      "14": 58,
+                      "15": 115,
+                      "16": 205,
+                      "17": 168,
+                      "18": 75,
+                      "19": 217
+                    }
+                  },
+                  "requiresDirectConnection": null,
+                  "bizContentPlaceholderType": null,
+                  "hostedBizEncStateMismatch": false,
+                  "senderOrRecipientAccountTypeHosted": false,
+                  "placeholderCreatedWhenAccountIsHosted": false,
+                  "groupHistoryBundleMessageKey": null,
+                  "groupHistoryBundleMetadata": null,
+                  "links": []
+                },
+                "id": {
+                  "fromMe": false,
+                  "remote": "120363421902461838@g.us",
+                  "id": "AC063392A3BED45645F762C3B28FB03A",
+                  "participant": "230395148812338@lid",
+                  "_serialized": "false_120363421902461838@g.us_AC063392A3BED45645F762C3B28FB03A_230395148812338@lid"
+                },
+                "ack": 1,
+                "hasMedia": false,
+                "body": "Check my unread message",
+                "type": "chat",
+                "timestamp": 1762070622,
+                "from": "120363421902461838@g.us",
+                "to": "8619037134897@c.us",
+                "author": "230395148812338@lid",
+                "deviceType": "android",
+                "isForwarded": false,
+                "forwardingScore": 0,
+                "isStatus": false,
+                "isStarred": false,
+                "fromMe": false,
+                "hasQuotedMsg": false,
+                "hasReaction": false,
+                "vCards": [],
+                "mentionedIds": [],
+                "groupMentions": [],
+                "isGif": false,
+                "links": []
+              }
+            },
+            "sessionId": "ABCDE"
+          },
+          "webhookUrl": "https://n8n.cxxtms.com/webhook/e8c8e9f9-02e5-484b-8487-68fa73717137",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "repo": {
+    "owner": "sunrisewestern",
+    "name": "n8n-backup"
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "America/Toronto",
+    "saveExecutionProgress": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  },
+  "shared": [
+    {
+      "updatedAt": "2025-11-01T18:39:45.845Z",
+      "createdAt": "2025-11-01T18:39:45.845Z",
+      "role": "workflow:owner",
+      "workflowId": "okPn3ru7DELkNUTe",
+      "projectId": "O3TKzz1LtWsv0pol"
+    }
+  ],
+  "staticData": {
+    "node:Schedule Trigger": {
+      "recurrenceRules": []
+    }
+  },
+  "tags": [],
+  "triggerCount": 2,
+  "updatedAt": "2025-11-03T04:08:44.619Z",
+  "versionId": "f501ef16-fbfb-4e26-919e-f1abc663834f"
+}
