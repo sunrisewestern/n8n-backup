@@ -131,8 +131,8 @@
         "serviceAttributes": {
           "attributes": [
             {
-              "name": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('attributes0_Name', ``, 'string') }}",
-              "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('attributes0_Value', ``, 'string') }}"
+              "name": "command",
+              "value": "={{ $fromAI('command', ``, 'string') }}"
             }
           ]
         }
@@ -155,15 +155,25 @@
     {
       "parameters": {
         "resource": "service",
-        "operation": "call"
+        "operation": "call",
+        "domain": "light",
+        "service": "turn_off",
+        "serviceAttributes": {
+          "attributes": [
+            {
+              "name": "Targets",
+              "value": "Bedroom"
+            }
+          ]
+        }
       },
       "type": "n8n-nodes-base.homeAssistant",
       "typeVersion": 1,
       "position": [
-        224,
-        96
+        160,
+        80
       ],
-      "id": "b575a650-3a75-4d0e-8514-baf01f67a6ef",
+      "id": "2bb79124-d2f7-4a59-a0da-868cae618285",
       "name": "Call a service",
       "credentials": {
         "homeAssistantApi": {
@@ -194,6 +204,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-11-05T04:42:14.664Z",
-  "versionId": "6fa02e1f-e370-477f-8346-28df1f7ae57c"
+  "updatedAt": "2025-11-20T20:01:36.712Z",
+  "versionId": "9ccdc16e-030a-4d12-aa09-d3a8ae3642d2"
 }
