@@ -608,7 +608,7 @@
         ]
       ]
     },
-    "Google assistant": {
+    "Website Crawler": {
       "ai_tool": [
         [
           {
@@ -619,7 +619,7 @@
         ]
       ]
     },
-    "Website Crawler": {
+    "Home Assistant": {
       "ai_tool": [
         [
           {
@@ -2199,36 +2199,6 @@
     },
     {
       "parameters": {
-        "resource": "service",
-        "operation": "call",
-        "domain": "google_assistant_sdk_custom",
-        "service": "send_text_command",
-        "serviceAttributes": {
-          "attributes": [
-            {
-              "name": "=command",
-              "value": "={{ $fromAI('command', ``, 'string') }}"
-            }
-          ]
-        }
-      },
-      "type": "n8n-nodes-base.homeAssistantTool",
-      "typeVersion": 1,
-      "position": [
-        2864,
-        896
-      ],
-      "id": "5959a243-826d-4dd4-a3c8-cce32f0430f2",
-      "name": "Google assistant",
-      "credentials": {
-        "homeAssistantApi": {
-          "id": "2vrTEEZBuf1tLscw",
-          "name": "Home Assistant account"
-        }
-      }
-    },
-    {
-      "parameters": {
         "url": "={{ $fromAI('URL', ``, 'string') }}",
         "options": {},
         "requestOptions": {}
@@ -2245,6 +2215,36 @@
         "jinaAiApi": {
           "id": "E6v9kWNdhvxzp4wH",
           "name": "Jina AI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "service",
+        "operation": "call",
+        "domain": "google_assistant_sdk_custom",
+        "service": "send_text_command",
+        "serviceAttributes": {
+          "attributes": [
+            {
+              "name": "command",
+              "value": "={{ $fromAI('command', ``, 'string') }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.homeAssistantTool",
+      "typeVersion": 1,
+      "position": [
+        2864,
+        896
+      ],
+      "id": "5959a243-826d-4dd4-a3c8-cce32f0430f2",
+      "name": "Home Assistant",
+      "credentials": {
+        "homeAssistantApi": {
+          "id": "2vrTEEZBuf1tLscw",
+          "name": "Home Assistant account"
         }
       }
     }
@@ -2546,6 +2546,6 @@
   },
   "tags": [],
   "triggerCount": 3,
-  "updatedAt": "2025-11-05T05:06:06.770Z",
-  "versionId": "ddc41021-ea62-41a8-ac6f-1f8cfe6ee395"
+  "updatedAt": "2025-11-20T20:02:13.340Z",
+  "versionId": "e3ca0a54-1138-4c87-8e08-ccaf99f7f4d4"
 }
