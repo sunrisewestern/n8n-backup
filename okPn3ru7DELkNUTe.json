@@ -4788,7 +4788,7 @@
     },
     "node:Schedule Trigger (3 days)": {
       "recurrenceRules": [
-        359
+        362
       ]
     },
     "node:Schedule Trigger (30 min)": {
